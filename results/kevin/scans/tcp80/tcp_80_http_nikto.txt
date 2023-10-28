@@ -14,3 +14,8 @@
 + /cgi-bin-sdb/dose.pl?daily&somefile.txt&|ls|: DailyDose 1.1 is vulnerable to a directory traversal attack in the 'list' parameter. See: OSVDB-2799
 + /forum/memberlist.php?s=23c37cf1af5d2ad05f49361b0407ad9e&what=\">\"<script>javascript:alert(document.cookie)</script>: Vbulletin 2.2.9 and below are vulnerable to Cross Site Scripting (XSS). See: OSVDB-3280
 + /docs/<script>alert('Vulnerable');</script>: Nokia Electronic Documentation is vulnerable to Cross Site Scripting (XSS). See: http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0801
++ ERROR: Error limit (20) reached for host, giving up. Last error: opening stream: can't connect (timeout): Transport endpoint is not connected
++ Scan terminated: 13 error(s) and 7 item(s) reported on remote host
++ End Time:           2023-10-28 07:21:38 (GMT-4) (5325 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
