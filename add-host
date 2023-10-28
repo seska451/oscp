@@ -2,12 +2,14 @@
 
 # Check if IP address and hostname are provided as command line arguments
 if [ $# -ne 2 ]; then
-  echo "Usage: $0 <ip_address> <hostname>"
-  exit 1
+	echo "Usage: $0 <ip_address> <hostname>"
+	exit 1
 fi
 
 ip_address=$1
 hostname=$2
+folder_path="/home/kali/src/oscp/boxes/$hostname"
 
-# Add a host entry to the hosts file
+# Add a host entry to the hosts fil
 echo "$ip_address    $hostname" >> /etc/hosts
+

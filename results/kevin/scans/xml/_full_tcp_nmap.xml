@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Sat Oct 28 05:49:48 2023 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/src/oscp/results/kevin/scans/_full_tcp_nmap.txt -oX /home/kali/src/oscp/results/kevin/scans/xml/_full_tcp_nmap.xml kevin -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/src/oscp/results/kevin/scans/_full_tcp_nmap.txt -oX /home/kali/src/oscp/results/kevin/scans/xml/_full_tcp_nmap.xml kevin" start="1698486588" startstr="Sat Oct 28 05:49:48 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1698486588"/>
+<taskend task="NSE" time="1698486588"/>
+<taskbegin task="NSE" time="1698486588"/>
+<taskend task="NSE" time="1698486588"/>
+<taskbegin task="NSE" time="1698486588"/>
+<taskend task="NSE" time="1698486588"/>
+<taskbegin task="Connect Scan" time="1698486588"/>
+<taskprogress task="Connect Scan" time="1698486619" percent="1.97" remaining="1544" etc="1698488163"/>
+<taskprogress task="Connect Scan" time="1698486649" percent="3.44" remaining="1711" etc="1698488359"/>
+<taskprogress task="Connect Scan" time="1698486679" percent="4.59" remaining="1892" etc="1698488571"/>
+<taskprogress task="Connect Scan" time="1698486733" percent="6.73" remaining="2011" etc="1698488743"/>
+<taskprogress task="Connect Scan" time="1698486781" percent="9.24" remaining="1897" etc="1698488678"/>
+<taskprogress task="Connect Scan" time="1698486811" percent="11.22" remaining="1765" etc="1698488576"/>
+<taskprogress task="Connect Scan" time="1698486940" percent="17.51" remaining="1658" etc="1698488598"/>
+<taskprogress task="Connect Scan" time="1698487099" percent="24.80" remaining="1550" etc="1698488649"/>
+<taskprogress task="Connect Scan" time="1698487162" percent="28.48" remaining="1442" etc="1698488603"/>
+<taskprogress task="Connect Scan" time="1698487240" percent="32.84" remaining="1334" etc="1698488573"/>
+<taskprogress task="Connect Scan" time="1698487330" percent="37.65" remaining="1230" etc="1698488559"/>
+<taskprogress task="Connect Scan" time="1698487393" percent="41.68" remaining="1127" etc="1698488520"/>
+<taskprogress task="Connect Scan" time="1698487474" percent="46.28" remaining="1029" etc="1698488502"/>
+<taskprogress task="Connect Scan" time="1698487526" percent="48.78" remaining="986" etc="1698488511"/>
+<taskprogress task="Connect Scan" time="1698487613" percent="53.66" remaining="886" etc="1698488498"/>
+<taskprogress task="Connect Scan" time="1698487694" percent="58.43" remaining="787" etc="1698488481"/>
+<taskprogress task="Connect Scan" time="1698487793" percent="63.56" remaining="691" etc="1698488484"/>
+<taskprogress task="Connect Scan" time="1698487889" percent="68.67" remaining="594" etc="1698488482"/>
+<taskprogress task="Connect Scan" time="1698488003" percent="74.06" remaining="496" etc="1698488499"/>
+<taskprogress task="Connect Scan" time="1698488090" percent="79.00" remaining="400" etc="1698488489"/>
+<taskprogress task="Connect Scan" time="1698488186" percent="84.03" remaining="304" etc="1698488490"/>
+<taskprogress task="Connect Scan" time="1698488276" percent="89.02" remaining="209" etc="1698488484"/>
+<taskprogress task="Connect Scan" time="1698488369" percent="94.09" remaining="112" etc="1698488481"/>
+<taskend task="Connect Scan" time="1698488508" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1698488508"/>
+<taskprogress task="Service scan" time="1698488570" percent="41.67" remaining="87" etc="1698488657"/>
+<taskend task="Service scan" time="1698488653" extrainfo="12 services on 1 host"/>
+<taskbegin task="NSE" time="1698488653"/>
+<taskend task="NSE" time="1698488665"/>
+<taskbegin task="NSE" time="1698488665"/>
+<taskend task="NSE" time="1698488666"/>
+<taskbegin task="NSE" time="1698488666"/>
+<taskend task="NSE" time="1698488666"/>
+<host starttime="1698486588" endtime="1698488666"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.190.45" addrtype="ipv4"/>
+<hostnames>
+<hostname name="kevin" type="user"/>
+<hostname name="kevin" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65523">
+<extrareasons reason="conn-refused" count="65523" proto="tcp" ports="1-79,81-134,136-138,140-444,446-3388,3390-3572,3574-49151,49156-49158,49161-65535"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="GoAhead WebServer" method="probed" conf="10"><cpe>cpe:/a:goahead:goahead_webserver</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-server-header" output="GoAhead-Webs"><elem>GoAhead-Webs</elem>
+</script><script id="http-title" output="HP Power Manager&#xa;Requested resource was http://kevin/index.asp"><elem key="title">HP Power Manager</elem>
+<elem key="redirect_url">http://kevin/index.asp</elem>
+</script></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="&#xf0;`&#x16;&#x19;&#xba;U" product="Windows 7 Ultimate N 7600 microsoft-ds" extrainfo="workgroup: WORKGROUP" hostname="KEVIN" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-wbt-server" tunnel="ssl" method="table" conf="3"/><script id="ssl-date" output="2023-10-28T10:24:25+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2023-10-28T10:24:25+00:00</elem>
+</script><script id="rdp-ntlm-info" output="&#xa;  Target_Name: KEVIN&#xa;  NetBIOS_Domain_Name: KEVIN&#xa;  NetBIOS_Computer_Name: KEVIN&#xa;  DNS_Domain_Name: kevin&#xa;  DNS_Computer_Name: kevin&#xa;  Product_Version: 6.1.7600&#xa;  System_Time: 2023-10-28T10:24:15+00:00"><elem key="Target_Name">KEVIN</elem>
+<elem key="NetBIOS_Domain_Name">KEVIN</elem>
+<elem key="NetBIOS_Computer_Name">KEVIN</elem>
+<elem key="DNS_Domain_Name">kevin</elem>
+<elem key="DNS_Computer_Name">kevin</elem>
+<elem key="Product_Version">6.1.7600</elem>
+<elem key="System_Time">2023-10-28T10:24:15+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=kevin&#xa;Issuer: commonName=kevin&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha1WithRSAEncryption&#xa;Not valid before: 2023-10-27T09:47:11&#xa;Not valid after:  2024-04-27T09:47:11&#xa;MD5:   7e8d:9455:7724:b542:0ffc:2262:3715:c82a&#xa;SHA-1: 4d56:a93a:9425:9f77:2d17:3c19:54aa:e578:9152:3e30&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIICzjCCAbagAwIBAgIQFwWVcgZ8rLRNFItcRIDOgzANBgkqhkiG9w0BAQUFADAQ&#xa;MQ4wDAYDVQQDEwVrZXZpbjAeFw0yMzEwMjcwOTQ3MTFaFw0yNDA0MjcwOTQ3MTFa&#xa;MBAxDjAMBgNVBAMTBWtldmluMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC&#xa;AQEAx4ETzuuBwk8JZEEgJN/TWSelPRB5N4RFMv+5BDOYVnxi6a2flYNL6epc4c6O&#xa;+xBZD4EuyEAxeXrpcxxqEXUKeneUftr323L/N/0O7+BkM8l7pR98064uv6RJOjr0&#xa;OBjCc0biVuMjLXWJf+N/fTaPSe6GBYbhCdeAGl3VxhVgem6Bp1MAVBIep9g4EqY3&#xa;Z7Ckser1ukgxF97lx4tFYGeOcXPgOQreDU2p8wuIVJa800x1TtrgR7KNk17qBsfC&#xa;pqO9db3ndo4ACaIK4FO5IV5jh8x5YkrdiVUJyKs0uW5diVLMDL1AUOq0Ra/InGY8&#xa;i7js/OuvIpTbWDlWIO+yIZYzcQIDAQABoyQwIjATBgNVHSUEDDAKBggrBgEFBQcD&#xa;ATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQEFBQADggEBAGNuZ61n0TcOM2opkyEF&#xa;6X5U3L070TGHNNSgcVN6ugAPzvtUwZJRpfxe53Ly/4p/5/EUd5FGdkx2EG3oM4S/&#xa;KLNP0RRI+PKUi3DuNN0CByNmxiZ6aiL84DPf3axBxq49E/DGJNT39DzcFzqKrqLr&#xa;TIPg+VWehx/QkdwKhXX5S3qz09abO9G+h0jIzAaIdsfBvp5YWF9LkUYN29jqFd+6&#xa;1poMtn25BeyA2SErz0NZQ3dm3+vcrDf0RGsTXL8Lm/CqD71NeoXtUaUEb3e1Wxxp&#xa;J4yRsGmLwgExFOUCvvSqNYaJyz1vxvgUQZliistEdxjbp396zAg5Pp7ckkuCrWRa&#xa;MK4=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">kevin</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">kevin</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">C78113CEEB81C24F0964412024DFD35927A53D107937844532FFB9043398567C62E9AD9F95834BE9EA5CE1CE8EFB10590F812EC84031797AE9731C6A11750A7A77947EDAF7DB72FF37FD0EEFE06433C97BA51F7CD3AE2EBFA4493A3AF43818C27346E256E3232D75897FE37F7D368F49EE860586E109D7801A5DD5C615607A6E81A7530054121EA7D83812A63767B0A4B1EAF5BA483117DEE5C78B4560678E7173E0390ADE0D4DA9F30B885496BCD34C754EDAE047B28D935EEA06C7C2A6A3BD75BDE7768E0009A20AE053B9215E6387CC79624ADD895509C8AB34B96E5D8952CC0CBD4050EAB445AFC89C663C8BB8ECFCEBAF2294DB58395620EFB221963371</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2023-10-27T09:47:11</elem>
+<elem key="notAfter">2024-04-27T09:47:11</elem>
+</table>
+<elem key="md5">7e8d94557724b5420ffc22623715c82a</elem>
+<elem key="sha1">4d56a93a94259f772d173c1954aae57891523e30</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIICzjCCAbagAwIBAgIQFwWVcgZ8rLRNFItcRIDOgzANBgkqhkiG9w0BAQUFADAQ&#xa;MQ4wDAYDVQQDEwVrZXZpbjAeFw0yMzEwMjcwOTQ3MTFaFw0yNDA0MjcwOTQ3MTFa&#xa;MBAxDjAMBgNVBAMTBWtldmluMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC&#xa;AQEAx4ETzuuBwk8JZEEgJN/TWSelPRB5N4RFMv+5BDOYVnxi6a2flYNL6epc4c6O&#xa;+xBZD4EuyEAxeXrpcxxqEXUKeneUftr323L/N/0O7+BkM8l7pR98064uv6RJOjr0&#xa;OBjCc0biVuMjLXWJf+N/fTaPSe6GBYbhCdeAGl3VxhVgem6Bp1MAVBIep9g4EqY3&#xa;Z7Ckser1ukgxF97lx4tFYGeOcXPgOQreDU2p8wuIVJa800x1TtrgR7KNk17qBsfC&#xa;pqO9db3ndo4ACaIK4FO5IV5jh8x5YkrdiVUJyKs0uW5diVLMDL1AUOq0Ra/InGY8&#xa;i7js/OuvIpTbWDlWIO+yIZYzcQIDAQABoyQwIjATBgNVHSUEDDAKBggrBgEFBQcD&#xa;ATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQEFBQADggEBAGNuZ61n0TcOM2opkyEF&#xa;6X5U3L070TGHNNSgcVN6ugAPzvtUwZJRpfxe53Ly/4p/5/EUd5FGdkx2EG3oM4S/&#xa;KLNP0RRI+PKUi3DuNN0CByNmxiZ6aiL84DPf3axBxq49E/DGJNT39DzcFzqKrqLr&#xa;TIPg+VWehx/QkdwKhXX5S3qz09abO9G+h0jIzAaIdsfBvp5YWF9LkUYN29jqFd+6&#xa;1poMtn25BeyA2SErz0NZQ3dm3+vcrDf0RGsTXL8Lm/CqD71NeoXtUaUEb3e1Wxxp&#xa;J4yRsGmLwgExFOUCvvSqNYaJyz1vxvgUQZliistEdxjbp396zAg5Pp7ckkuCrWRa&#xa;MK4=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="3573"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tag-ups-1" method="table" conf="3"/></port>
+<port protocol="tcp" portid="49152"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49154"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49155"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49159"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49160"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="smb-os-discovery" output="&#xa;  OS: Windows 7 Ultimate N 7600 (Windows 7 Ultimate N 6.1)&#xa;  OS CPE: cpe:/o:microsoft:windows_7::-&#xa;  Computer name: kevin&#xa;  NetBIOS computer name: KEVIN\x00&#xa;  Workgroup: WORKGROUP\x00&#xa;  System time: 2023-10-28T03:24:14-07:00&#xa;"><elem key="os">Windows 7 Ultimate N 7600</elem>
+<elem key="lanmanager">Windows 7 Ultimate N 6.1</elem>
+<elem key="server">KEVIN\x00</elem>
+<elem key="date">2023-10-28T03:24:14-07:00</elem>
+<elem key="fqdn">kevin</elem>
+<elem key="domain_dns">kevin</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+<elem key="cpe">cpe:/o:microsoft:windows_7::-</elem>
+</script><script id="smb2-time" output="&#xa;  date: 2023-10-28T10:24:14&#xa;  start_date: 2023-10-28T09:47:34"><elem key="date">2023-10-28T10:24:14</elem>
+<elem key="start_date">2023-10-28T09:47:34</elem>
+</script><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 45963/tcp): CLEAN (Couldn&apos;t connect)&#xa;  Check 2 (port 8908/tcp): CLEAN (Couldn&apos;t connect)&#xa;  Check 3 (port 62620/udp): CLEAN (Timeout)&#xa;  Check 4 (port 50624/udp): CLEAN (Failed to receive data)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb2-security-mode" output="&#xa;  2:1:0: &#xa;    Message signing enabled but not required"><table key="2:1:0">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="clock-skew" output="mean: 1h24m00s, deviation: 3h07m50s, median: 0s"><elem key="median">0</elem>
+<elem key="mean">5040</elem>
+<elem key="stddev">11270</elem>
+<elem key="count">5</elem>
+</script><script id="nbstat" output="NetBIOS name: KEVIN, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:bf:8c:c4 (VMware)&#xa;Names:&#xa;  KEVIN&lt;00&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  KEVIN&lt;20&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1d&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00:50:56:bf:8c:c4:00:00:00:00:00:00:00:00:00:00:00&#xa;  00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00&#xa;  00:00:00:00:00:00:00:00:00:00:00:00:00:00"/><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script></hostscript><times srtt="340137" rttvar="1070" to="344417"/>
+</host>
+<taskbegin task="NSE" time="1698488666"/>
+<taskend task="NSE" time="1698488666"/>
+<taskbegin task="NSE" time="1698488666"/>
+<taskend task="NSE" time="1698488666"/>
+<taskbegin task="NSE" time="1698488666"/>
+<taskend task="NSE" time="1698488666"/>
+<runstats><finished time="1698488666" timestr="Sat Oct 28 06:24:26 2023" summary="Nmap done at Sat Oct 28 06:24:26 2023; 1 IP address (1 host up) scanned in 2078.37 seconds" elapsed="2078.37" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

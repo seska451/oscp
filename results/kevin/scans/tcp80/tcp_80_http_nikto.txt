@@ -1,0 +1,16 @@
+- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Target IP:          192.168.190.45
++ Target Hostname:    kevin
++ Target Port:        80
++ Start Time:         2023-10-28 05:52:53 (GMT-4)
+---------------------------------------------------------------------------
++ Server: GoAhead-Webs
++ /: The anti-clickjacking X-Frame-Options header is not present. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
++ /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/
++ Root page / redirects to: http://kevin/index.asp
++ GoAhead-Webs - This may be a Cyclade, http://www.cyclades.com/.
++ /cgi-bin/dose.pl?daily&somefile.txt&|ls|: DailyDose 1.1 is vulnerable to a directory traversal attack in the 'list' parameter. See: OSVDB-2799
++ /cgi-bin-sdb/dose.pl?daily&somefile.txt&|ls|: DailyDose 1.1 is vulnerable to a directory traversal attack in the 'list' parameter. See: OSVDB-2799
++ /forum/memberlist.php?s=23c37cf1af5d2ad05f49361b0407ad9e&what=\">\"<script>javascript:alert(document.cookie)</script>: Vbulletin 2.2.9 and below are vulnerable to Cross Site Scripting (XSS). See: OSVDB-3280
++ /docs/<script>alert('Vulnerable');</script>: Nokia Electronic Documentation is vulnerable to Cross Site Scripting (XSS). See: http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0801

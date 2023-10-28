@@ -1,0 +1,104 @@
+# Nmap 7.94 scan initiated Sat Oct 28 05:49:48 2023 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN /home/kali/src/oscp/results/kevin/scans/_full_tcp_nmap.txt -oX /home/kali/src/oscp/results/kevin/scans/xml/_full_tcp_nmap.xml kevin
+Nmap scan report for kevin (192.168.190.45)
+Host is up, received user-set (0.34s latency).
+Scanned at 2023-10-28 05:49:48 EDT for 2078s
+Not shown: 65523 closed tcp ports (conn-refused)
+PORT      STATE SERVICE            REASON  VERSION
+80/tcp    open  http               syn-ack GoAhead WebServer
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: GoAhead-Webs
+| http-title: HP Power Manager
+|_Requested resource was http://kevin/index.asp
+135/tcp   open  msrpc              syn-ack Microsoft Windows RPC
+139/tcp   open  netbios-ssn        syn-ack Microsoft Windows netbios-ssn
+445/tcp   open  ð`ºU             syn-ack Windows 7 Ultimate N 7600 microsoft-ds (workgroup: WORKGROUP)
+3389/tcp  open  ssl/ms-wbt-server? syn-ack
+|_ssl-date: 2023-10-28T10:24:25+00:00; 0s from scanner time.
+| rdp-ntlm-info: 
+|   Target_Name: KEVIN
+|   NetBIOS_Domain_Name: KEVIN
+|   NetBIOS_Computer_Name: KEVIN
+|   DNS_Domain_Name: kevin
+|   DNS_Computer_Name: kevin
+|   Product_Version: 6.1.7600
+|_  System_Time: 2023-10-28T10:24:15+00:00
+| ssl-cert: Subject: commonName=kevin
+| Issuer: commonName=kevin
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2023-10-27T09:47:11
+| Not valid after:  2024-04-27T09:47:11
+| MD5:   7e8d:9455:7724:b542:0ffc:2262:3715:c82a
+| SHA-1: 4d56:a93a:9425:9f77:2d17:3c19:54aa:e578:9152:3e30
+| -----BEGIN CERTIFICATE-----
+| MIICzjCCAbagAwIBAgIQFwWVcgZ8rLRNFItcRIDOgzANBgkqhkiG9w0BAQUFADAQ
+| MQ4wDAYDVQQDEwVrZXZpbjAeFw0yMzEwMjcwOTQ3MTFaFw0yNDA0MjcwOTQ3MTFa
+| MBAxDjAMBgNVBAMTBWtldmluMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+| AQEAx4ETzuuBwk8JZEEgJN/TWSelPRB5N4RFMv+5BDOYVnxi6a2flYNL6epc4c6O
+| +xBZD4EuyEAxeXrpcxxqEXUKeneUftr323L/N/0O7+BkM8l7pR98064uv6RJOjr0
+| OBjCc0biVuMjLXWJf+N/fTaPSe6GBYbhCdeAGl3VxhVgem6Bp1MAVBIep9g4EqY3
+| Z7Ckser1ukgxF97lx4tFYGeOcXPgOQreDU2p8wuIVJa800x1TtrgR7KNk17qBsfC
+| pqO9db3ndo4ACaIK4FO5IV5jh8x5YkrdiVUJyKs0uW5diVLMDL1AUOq0Ra/InGY8
+| i7js/OuvIpTbWDlWIO+yIZYzcQIDAQABoyQwIjATBgNVHSUEDDAKBggrBgEFBQcD
+| ATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQEFBQADggEBAGNuZ61n0TcOM2opkyEF
+| 6X5U3L070TGHNNSgcVN6ugAPzvtUwZJRpfxe53Ly/4p/5/EUd5FGdkx2EG3oM4S/
+| KLNP0RRI+PKUi3DuNN0CByNmxiZ6aiL84DPf3axBxq49E/DGJNT39DzcFzqKrqLr
+| TIPg+VWehx/QkdwKhXX5S3qz09abO9G+h0jIzAaIdsfBvp5YWF9LkUYN29jqFd+6
+| 1poMtn25BeyA2SErz0NZQ3dm3+vcrDf0RGsTXL8Lm/CqD71NeoXtUaUEb3e1Wxxp
+| J4yRsGmLwgExFOUCvvSqNYaJyz1vxvgUQZliistEdxjbp396zAg5Pp7ckkuCrWRa
+| MK4=
+|_-----END CERTIFICATE-----
+3573/tcp  open  tag-ups-1?         syn-ack
+49152/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49153/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49154/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49155/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49159/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49160/tcp open  msrpc              syn-ack Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb-os-discovery: 
+|   OS: Windows 7 Ultimate N 7600 (Windows 7 Ultimate N 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_7::-
+|   Computer name: kevin
+|   NetBIOS computer name: KEVIN\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2023-10-28T03:24:14-07:00
+| smb2-time: 
+|   date: 2023-10-28T10:24:14
+|_  start_date: 2023-10-28T09:47:34
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 45963/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 8908/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 62620/udp): CLEAN (Timeout)
+|   Check 4 (port 50624/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   2:1:0: 
+|_    Message signing enabled but not required
+|_clock-skew: mean: 1h24m00s, deviation: 3h07m50s, median: 0s
+| nbstat: NetBIOS name: KEVIN, NetBIOS user: <unknown>, NetBIOS MAC: 00:50:56:bf:8c:c4 (VMware)
+| Names:
+|   KEVIN<00>            Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   KEVIN<20>            Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+| Statistics:
+|   00:50:56:bf:8c:c4:00:00:00:00:00:00:00:00:00:00:00
+|   00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+|_  00:00:00:00:00:00:00:00:00:00:00:00:00:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Oct 28 06:24:26 2023 -- 1 IP address (1 host up) scanned in 2078.37 seconds

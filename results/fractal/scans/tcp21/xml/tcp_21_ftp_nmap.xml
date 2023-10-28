@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Fri Oct 27 23:12:42 2023 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/src/oscp/results/fractal/scans/tcp21/tcp_21_ftp_nmap.txt -oX /home/kali/src/oscp/results/fractal/scans/tcp21/xml/tcp_21_ftp_nmap.xml fractal -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/src/oscp/results/fractal/scans/tcp21/tcp_21_ftp_nmap.txt -oX /home/kali/src/oscp/results/fractal/scans/tcp21/xml/tcp_21_ftp_nmap.xml fractal" start="1698462762" startstr="Fri Oct 27 23:12:42 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="21"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1698462762"/>
+<taskend task="NSE" time="1698462762"/>
+<taskbegin task="NSE" time="1698462762"/>
+<taskend task="NSE" time="1698462762"/>
+<taskbegin task="NSE" time="1698462762"/>
+<taskend task="NSE" time="1698462762"/>
+<taskbegin task="Connect Scan" time="1698462762"/>
+<taskend task="Connect Scan" time="1698462762" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1698462762"/>
+<taskend task="Service scan" time="1698462769" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1698462769"/>
+<taskend task="NSE" time="1698462770"/>
+<taskbegin task="NSE" time="1698462770"/>
+<taskend task="NSE" time="1698462773"/>
+<taskbegin task="NSE" time="1698462773"/>
+<taskend task="NSE" time="1698462773"/>
+<host starttime="1698462762" endtime="1698462773"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.190.233" addrtype="ipv4"/>
+<hostnames>
+<hostname name="fractal" type="user"/>
+<hostname name="fractal" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ftp" product="ProFTPD" method="probed" conf="10"><cpe>cpe:/a:proftpd:proftpd</cpe></service><script id="banner" output="220 ProFTPD Server (Debian) [192.168.190.233]"/></port>
+</ports>
+<times srtt="345295" rttvar="345295" to="1250000"/>
+</host>
+<taskbegin task="NSE" time="1698462773"/>
+<taskend task="NSE" time="1698462773"/>
+<taskbegin task="NSE" time="1698462773"/>
+<taskend task="NSE" time="1698462773"/>
+<taskbegin task="NSE" time="1698462773"/>
+<taskend task="NSE" time="1698462773"/>
+<runstats><finished time="1698462773" timestr="Fri Oct 27 23:12:53 2023" summary="Nmap done at Fri Oct 27 23:12:53 2023; 1 IP address (1 host up) scanned in 11.02 seconds" elapsed="11.02" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

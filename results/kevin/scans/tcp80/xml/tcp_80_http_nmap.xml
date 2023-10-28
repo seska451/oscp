@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Sat Oct 28 05:52:52 2023 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/src/oscp/results/kevin/scans/tcp80/tcp_80_http_nmap.txt -oX /home/kali/src/oscp/results/kevin/scans/tcp80/xml/tcp_80_http_nmap.xml kevin -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/src/oscp/results/kevin/scans/tcp80/tcp_80_http_nmap.txt -oX /home/kali/src/oscp/results/kevin/scans/tcp80/xml/tcp_80_http_nmap.xml kevin" start="1698486772" startstr="Sat Oct 28 05:52:52 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="80"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1698486772"/>
+<taskend task="NSE" time="1698486772"/>
+<taskbegin task="NSE" time="1698486772"/>
+<taskend task="NSE" time="1698486772"/>
+<taskbegin task="NSE" time="1698486772"/>
+<taskend task="NSE" time="1698486772"/>
+<taskbegin task="Connect Scan" time="1698486773"/>
+<taskend task="Connect Scan" time="1698486773" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1698486773"/>
+<taskend task="Service scan" time="1698486774" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1698486774"/>
+<taskprogress task="NSE" time="1698486805" percent="97.07" remaining="1" etc="1698486806"/>
+<taskprogress task="NSE" time="1698486835" percent="99.03" remaining="1" etc="1698486836"/>
+<taskprogress task="NSE" time="1698486865" percent="99.03" remaining="1" etc="1698486866"/>
+<taskprogress task="NSE" time="1698486895" percent="99.03" remaining="2" etc="1698486896"/>
+<taskprogress task="NSE" time="1698486925" percent="99.03" remaining="2" etc="1698486926"/>
+<taskprogress task="NSE" time="1698486955" percent="99.03" remaining="2" etc="1698486957"/>
+<taskprogress task="NSE" time="1698486985" percent="99.68" remaining="1" etc="1698486986"/>
+<taskprogress task="NSE" time="1698487015" percent="99.68" remaining="1" etc="1698487016"/>
+<taskprogress task="NSE" time="1698487045" percent="99.68" remaining="1" etc="1698487046"/>
+<taskprogress task="NSE" time="1698487075" percent="99.68" remaining="1" etc="1698487076"/>
+<taskprogress task="NSE" time="1698487105" percent="99.68" remaining="2" etc="1698487106"/>
+<taskprogress task="NSE" time="1698487135" percent="99.68" remaining="2" etc="1698487136"/>
+<taskprogress task="NSE" time="1698487165" percent="99.68" remaining="2" etc="1698487166"/>
+<taskprogress task="NSE" time="1698487195" percent="99.68" remaining="2" etc="1698487196"/>
+<taskprogress task="NSE" time="1698487225" percent="99.68" remaining="2" etc="1698487226"/>
+<taskprogress task="NSE" time="1698487255" percent="99.68" remaining="2" etc="1698487257"/>
+<taskprogress task="NSE" time="1698487285" percent="99.68" remaining="2" etc="1698487287"/>
+<taskprogress task="NSE" time="1698487315" percent="99.68" remaining="2" etc="1698487317"/>
+<taskprogress task="NSE" time="1698487345" percent="99.68" remaining="2" etc="1698487347"/>
+<taskprogress task="NSE" time="1698487375" percent="99.68" remaining="2" etc="1698487377"/>
+<taskprogress task="NSE" time="1698487405" percent="99.68" remaining="3" etc="1698487407"/>
+<taskprogress task="NSE" time="1698487435" percent="99.68" remaining="3" etc="1698487437"/>
+<taskprogress task="NSE" time="1698487465" percent="99.68" remaining="3" etc="1698487467"/>
+<taskprogress task="NSE" time="1698487495" percent="99.68" remaining="3" etc="1698487497"/>
+<taskprogress task="NSE" time="1698487525" percent="99.68" remaining="3" etc="1698487527"/>
+<taskprogress task="NSE" time="1698487555" percent="99.68" remaining="3" etc="1698487558"/>
+<taskprogress task="NSE" time="1698487585" percent="99.68" remaining="3" etc="1698487588"/>
+<taskprogress task="NSE" time="1698487615" percent="99.68" remaining="3" etc="1698487618"/>
+<taskprogress task="NSE" time="1698487645" percent="99.68" remaining="3" etc="1698487648"/>
+<taskprogress task="NSE" time="1698487675" percent="99.68" remaining="3" etc="1698487678"/>
+<taskprogress task="NSE" time="1698487705" percent="99.68" remaining="4" etc="1698487708"/>
+<taskprogress task="NSE" time="1698487735" percent="99.68" remaining="4" etc="1698487738"/>
+<taskprogress task="NSE" time="1698487765" percent="99.68" remaining="4" etc="1698487768"/>
+<taskprogress task="NSE" time="1698487795" percent="99.68" remaining="4" etc="1698487798"/>
+<taskprogress task="NSE" time="1698487825" percent="99.68" remaining="4" etc="1698487828"/>
+<taskprogress task="NSE" time="1698487855" percent="99.68" remaining="4" etc="1698487859"/>
+<taskprogress task="NSE" time="1698487885" percent="99.68" remaining="4" etc="1698487889"/>
+<taskprogress task="NSE" time="1698487915" percent="99.68" remaining="4" etc="1698487919"/>
+<taskprogress task="NSE" time="1698487945" percent="99.68" remaining="4" etc="1698487949"/>
+<taskend task="NSE" time="1698487963"/>
+<taskbegin task="NSE" time="1698487963"/>
+<taskend task="NSE" time="1698487965"/>
+<taskbegin task="NSE" time="1698487965"/>
+<taskend task="NSE" time="1698487965"/>
+<host starttime="1698486773" endtime="1698487965"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.190.45" addrtype="ipv4"/>
+<hostnames>
+<hostname name="kevin" type="user"/>
+<hostname name="kevin" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="GoAhead WebServer" method="probed" conf="10"><cpe>cpe:/a:goahead:goahead_webserver</cpe></service><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      asp: 1&#xa;    /CStyle/&#xa;      css: 1&#xa;  Longest directory structure:&#xa;    Depth: 1&#xa;    Dir: /CStyle/&#xa;  Total files found (by extension):&#xa;    asp: 1; css: 1&#xa;"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/><script id="http-auth-finder" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=kevin&#xa;  url                        method&#xa;  http://kevin:80/index.asp  FORM&#xa;"/><script id="http-enum" output="&#xa;  /cgi-bin/mj_wwwusr: Majordomo2 Mailing List&#xa;  /cgi-bin/vcs: Mitel Audio and Web Conferencing (AWC)&#xa;  /cgi-bin/ffileman.cgi?: Ffileman Web File Manager&#xa;  /cgi-bin/ck/mimencode: ContentKeeper Web Appliance&#xa;  /cgi-bin/masterCGI?: Alcatel-Lucent OmniPCX Enterprise&#xa;  /cgi-bin/awstats.pl: AWStats&#xa;  /cgi-bin/image/shikaku2.png: TeraStation PRO RAID 0/1/5 Network Attached Storage&#xa;  /cgi-bin2/: Potentially interesting folder&#xa;  /cgi-bin/: Potentially interesting folder&#xa;"/><script id="http-errors" output="Couldn&apos;t find any error pages."/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-waf-detect" output="IDS/IPS/WAF detected:&#xa;kevin:80/?p4yl04d3=&lt;script&gt;alert(document.cookie)&lt;/script&gt;"/><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Redirected To: http://kevin/index.asp&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<elem key="Redirected To">http://kevin/index.asp</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=kevin&#xa;    &#xa;    Path: http://kevin:80/index.asp&#xa;    Line number: 113&#xa;    Comment: &#xa;        &lt;!-&#45; System Login -&#45;&gt;&#xa;    &#xa;    Path: http://kevin:80/CStyle/Theme.css&#xa;    Line number: 25&#xa;    Comment: &#xa;        /* a unique set for error type displays */&#xa;    &#xa;    Path: http://kevin:80/index.asp&#xa;    Line number: 106&#xa;    Comment: &#xa;        &lt;!-&#45; *** header bar *** -&#45;&gt;&#xa;    &#xa;    Path: http://kevin:80/CStyle/Theme.css&#xa;    Line number: 33&#xa;    Comment: &#xa;        /* a unique set for tab navigation displays */&#xa;    &#xa;    Path: http://kevin:80/index.asp&#xa;    Line number: 102&#xa;    Comment: &#xa;        &lt;!-&#45; *** begin dialog box *** -&#45;&gt;&#xa;    &#xa;    Path: http://kevin:80/CStyle/Theme.css&#xa;    Line number: 8&#xa;    Comment: &#xa;        /* 1st we cover the background color of a page for our three major display frames */&#xa;    &#xa;    Path: http://kevin:80/index.asp&#xa;    Line number: 15&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#x9;&#x9;//-&#45;&gt;&#xa;    &#xa;    Path: http://kevin:80/index.asp&#xa;    Line number: 92&#xa;    Comment: &#xa;        &lt;!-&#45; *** login page ****************************************************** -&#45;&gt;&#xa;    &#xa;    Path: http://kevin:80/CStyle/Theme.css&#xa;    Line number: 2&#xa;    Comment: &#xa;        /* default values for selected tags, Note: without background color defined! */&#xa;    &#xa;    Path: http://kevin:80/CStyle/Theme.css&#xa;    Line number: 16&#xa;    Comment: &#xa;        /* a unique set for dialog type displays, used most often */&#xa;    &#xa;    Path: http://kevin:80/index.asp&#xa;    Line number: 120&#xa;    Comment: &#xa;        &lt;!-&#45; *** dialog box content *** -&#45;&gt;&#xa;"/><script id="http-majordomo2-dir-traversal" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-config-backup" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-title" output="HP Power Manager&#xa;Requested resource was http://kevin/index.asp"><elem key="title">HP Power Manager</elem>
+<elem key="redirect_url">http://kevin/index.asp</elem>
+</script><script id="http-backup-finder" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=kevin&#xa;  http://kevin:80/CStyle/Theme.bak&#xa;  http://kevin:80/CStyle/Theme.css~&#xa;  http://kevin:80/CStyle/Theme copy.css&#xa;  http://kevin:80/CStyle/Copy of Theme.css&#xa;  http://kevin:80/CStyle/Copy (2) of Theme.css&#xa;  http://kevin:80/CStyle/Theme.css.1&#xa;  http://kevin:80/CStyle/Theme.css.~1~&#xa;"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-date" output="Sat Oct 28 02:53:09 2023; -7h00m01s from local time."><elem key="date">2023-10-28T02:53:09+00:00</elem>
+<elem key="delta">-25201.0</elem>
+</script><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-server-header" output="GoAhead-Webs"><elem>GoAhead-Webs</elem>
+</script><script id="http-chrono" output="Request times for /index.asp; avg: 1168.52ms; min: 1150.39ms; max: 1198.76ms"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-vhosts" output="&#xa;128 names had status 302"/><script id="http-headers" output="&#xa;  Date: Sat Oct 28 02:53:06 2023&#xa;  Server: GoAhead-Webs&#xa;  Pragma: no-cache&#xa;  Cache-Control: no-cache&#xa;  Content-type: text/html&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-security-headers" output="&#xa;  Cache_Control: &#xa;    Header: Cache-Control: no-cache&#xa;  Pragma: &#xa;    Header: Pragma: no-cache"><table key="Cache_Control">
+<elem>Header: Cache-Control: no-cache</elem>
+</table>
+<table key="Pragma">
+<elem>Header: Pragma: no-cache</elem>
+</table>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-csrf" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=kevin&#xa;  Found the following possible CSRF vulnerabilities: &#xa;    &#xa;    Path: http://kevin:80/index.asp&#xa;    Form id: &#xa;    Form action: /goform/formLogin&#xa;"/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash 3eed0da39686ae686bf048c444b70841&#xa;Credits query returned unknown hash 3eed0da39686ae686bf048c444b70841"/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/></port>
+</ports>
+<times srtt="340844" rttvar="340844" to="1250000"/>
+</host>
+<taskbegin task="NSE" time="1698487965"/>
+<taskend task="NSE" time="1698487965"/>
+<taskbegin task="NSE" time="1698487965"/>
+<taskend task="NSE" time="1698487965"/>
+<taskbegin task="NSE" time="1698487965"/>
+<taskend task="NSE" time="1698487965"/>
+<runstats><finished time="1698487965" timestr="Sat Oct 28 06:12:45 2023" summary="Nmap done at Sat Oct 28 06:12:45 2023; 1 IP address (1 host up) scanned in 1192.69 seconds" elapsed="1192.69" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Sat Oct 28 05:52:54 2023 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 3389 &quot;-&#45;script=banner,(rdp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/src/oscp/results/kevin/scans/tcp3389/tcp_3389_rdp_nmap.txt -oX /home/kali/src/oscp/results/kevin/scans/tcp3389/xml/tcp_3389_rdp_nmap.xml kevin -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 3389 &quot;-&#45;script=banner,(rdp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/src/oscp/results/kevin/scans/tcp3389/tcp_3389_rdp_nmap.txt -oX /home/kali/src/oscp/results/kevin/scans/tcp3389/xml/tcp_3389_rdp_nmap.xml kevin" start="1698486774" startstr="Sat Oct 28 05:52:54 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="3389"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1698486774"/>
+<taskend task="NSE" time="1698486774"/>
+<taskbegin task="NSE" time="1698486774"/>
+<taskend task="NSE" time="1698486774"/>
+<taskbegin task="NSE" time="1698486774"/>
+<taskend task="NSE" time="1698486774"/>
+<taskbegin task="Connect Scan" time="1698486774"/>
+<taskend task="Connect Scan" time="1698486775" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1698486775"/>
+<taskend task="Service scan" time="1698486786" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1698486786"/>
+<taskend task="NSE" time="1698486787"/>
+<taskbegin task="NSE" time="1698486787"/>
+<taskend task="NSE" time="1698486788"/>
+<taskbegin task="NSE" time="1698486788"/>
+<taskend task="NSE" time="1698486790"/>
+<host starttime="1698486774" endtime="1698486790"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.190.45" addrtype="ipv4"/>
+<hostnames>
+<hostname name="kevin" type="user"/>
+<hostname name="kevin" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-wbt-server" method="table" conf="3"/></port>
+</ports>
+<times srtt="345693" rttvar="345693" to="1250000"/>
+</host>
+<taskbegin task="NSE" time="1698486790"/>
+<taskend task="NSE" time="1698486790"/>
+<taskbegin task="NSE" time="1698486790"/>
+<taskend task="NSE" time="1698486790"/>
+<taskbegin task="NSE" time="1698486790"/>
+<taskend task="NSE" time="1698486790"/>
+<runstats><finished time="1698486790" timestr="Sat Oct 28 05:53:10 2023" summary="Nmap done at Sat Oct 28 05:53:10 2023; 1 IP address (1 host up) scanned in 16.67 seconds" elapsed="16.67" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

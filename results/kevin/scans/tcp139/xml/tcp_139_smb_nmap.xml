@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Sat Oct 28 05:52:53 2023 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/src/oscp/results/kevin/scans/tcp139/tcp_139_smb_nmap.txt -oX /home/kali/src/oscp/results/kevin/scans/tcp139/xml/tcp_139_smb_nmap.xml kevin -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/src/oscp/results/kevin/scans/tcp139/tcp_139_smb_nmap.txt -oX /home/kali/src/oscp/results/kevin/scans/tcp139/xml/tcp_139_smb_nmap.xml kevin" start="1698486773" startstr="Sat Oct 28 05:52:53 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="139"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1698486774"/>
+<taskend task="NSE" time="1698486774"/>
+<taskbegin task="NSE" time="1698486774"/>
+<taskend task="NSE" time="1698486774"/>
+<taskbegin task="NSE" time="1698486774"/>
+<taskend task="NSE" time="1698486774"/>
+<taskbegin task="Connect Scan" time="1698486774"/>
+<taskend task="Connect Scan" time="1698486774" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1698486774"/>
+<taskend task="Service scan" time="1698486776" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1698486776"/>
+<taskprogress task="NSE" time="1698486807" percent="97.18" remaining="1" etc="1698486808"/>
+<taskprogress task="NSE" time="1698486837" percent="97.18" remaining="2" etc="1698486839"/>
+<taskprogress task="NSE" time="1698486867" percent="97.18" remaining="3" etc="1698486870"/>
+<taskprogress task="NSE" time="1698486897" percent="97.18" remaining="4" etc="1698486901"/>
+<taskprogress task="NSE" time="1698486927" percent="97.18" remaining="5" etc="1698486931"/>
+<taskprogress task="NSE" time="1698486957" percent="97.18" remaining="6" etc="1698486962"/>
+<taskprogress task="NSE" time="1698486987" percent="97.18" remaining="7" etc="1698486993"/>
+<taskprogress task="NSE" time="1698487017" percent="97.18" remaining="7" etc="1698487024"/>
+<taskprogress task="NSE" time="1698487047" percent="97.18" remaining="8" etc="1698487055"/>
+<taskprogress task="NSE" time="1698487077" percent="97.18" remaining="9" etc="1698487086"/>
+<taskprogress task="NSE" time="1698487107" percent="97.18" remaining="10" etc="1698487117"/>
+<taskend task="NSE" time="1698487131"/>
+<taskbegin task="NSE" time="1698487131"/>
+<taskend task="NSE" time="1698487142"/>
+<taskbegin task="NSE" time="1698487142"/>
+<taskend task="NSE" time="1698487142"/>
+<host starttime="1698486774" endtime="1698487142"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.190.45" addrtype="ipv4"/>
+<hostnames>
+<hostname name="kevin" type="user"/>
+<hostname name="kevin" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="&#x3;Dtb&#x4;" product="Windows 7 Ultimate N 7600 netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="smb-enum-services" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: KEVIN, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:bf:8c:c4 (VMware)&#xa;Names:&#xa;  KEVIN&lt;00&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  KEVIN&lt;20&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1d&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00:50:56:bf:8c:c4:00:00:00:00:00:00:00:00:00:00:00&#xa;  00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00&#xa;  00:00:00:00:00:00:00:00:00:00:00:00:00:00"/><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]&#xa;    2:0:2&#xa;    2:1:0"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+<elem>2:0:2</elem>
+<elem>2:1:0</elem>
+</table>
+</script><script id="smb-vuln-ms10-061" output="NT_STATUS_ACCESS_DENIED">false</script><script id="smb-print-text" output="false">false</script><script id="smb-vuln-ms17-010" output="&#xa;  VULNERABLE:&#xa;  Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)&#xa;    State: VULNERABLE&#xa;    IDs:  CVE:CVE-2017-0143&#xa;    Risk factor: HIGH&#xa;      A critical remote code execution vulnerability exists in Microsoft SMBv1&#xa;       servers (ms17-010).&#xa;          &#xa;    Disclosure date: 2017-03-14&#xa;    References:&#xa;      https://technet.microsoft.com/en-us/library/security/ms17-010.aspx&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143&#xa;      https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/&#xa;"><table key="CVE-2017-0143">
+<elem key="title">Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2017-0143</elem>
+</table>
+<table key="description">
+<elem>A critical remote code execution vulnerability exists in Microsoft SMBv1&#xa; servers (ms17-010).&#xa;    </elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">14</elem>
+<elem key="year">2017</elem>
+<elem key="month">03</elem>
+</table>
+</table>
+<elem key="disclosure">2017-03-14</elem>
+<table key="refs">
+<elem>https://technet.microsoft.com/en-us/library/security/ms17-010.aspx</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143</elem>
+<elem>https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/</elem>
+</table>
+</table>
+</script><script id="smb-security-mode" output="&#xa;  account_used: &lt;blank&gt;&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">&lt;blank&gt;</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-capabilities" output="&#xa;  2:0:2: &#xa;    Distributed File System&#xa;  2:1:0: &#xa;    Distributed File System&#xa;    Leasing"><table key="2:0:2">
+<elem>Distributed File System</elem>
+</table>
+<table key="2:1:0">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+</table>
+</script><script id="smb-mbenum" output="&#xa;  Master Browser&#xa;    KEVIN  6.1  &#xa;  Potential Browser&#xa;    KEVIN  6.1  &#xa;  Server service&#xa;    KEVIN  6.1  &#xa;  Windows NT/2000/XP/2003 server&#xa;    KEVIN  6.1  &#xa;  Workstation&#xa;    KEVIN  6.1  &#xa;"/><script id="smb-os-discovery" output="&#xa;  OS: Windows 7 Ultimate N 7600 (Windows 7 Ultimate N 6.1)&#xa;  OS CPE: cpe:/o:microsoft:windows_7::-&#xa;  Computer name: kevin&#xa;  NetBIOS computer name: KEVIN\x00&#xa;  Workgroup: WORKGROUP\x00&#xa;  System time: 2023-10-28T02:52:58-07:00&#xa;"><elem key="os">Windows 7 Ultimate N 7600</elem>
+<elem key="lanmanager">Windows 7 Ultimate N 6.1</elem>
+<elem key="server">KEVIN\x00</elem>
+<elem key="date">2023-10-28T02:52:58-07:00</elem>
+<elem key="fqdn">kevin</elem>
+<elem key="domain_dns">kevin</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+<elem key="cpe">cpe:/o:microsoft:windows_7::-</elem>
+</script><script id="smb-enum-shares" output="&#xa;  note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)&#xa;  account_used: &lt;blank&gt;&#xa;  \\192.168.190.45\ADMIN$: &#xa;    warning: Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED&#xa;    Anonymous access: &lt;none&gt;&#xa;  \\192.168.190.45\C$: &#xa;    warning: Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED&#xa;    Anonymous access: &lt;none&gt;&#xa;  \\192.168.190.45\IPC$: &#xa;    warning: Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED&#xa;    Anonymous access: READ&#xa;  \\192.168.190.45\USERS: &#xa;    warning: Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED&#xa;    Anonymous access: &lt;none&gt;"><elem key="note">ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)</elem>
+<elem key="account_used">&lt;blank&gt;</elem>
+<table key="\\192.168.190.45\ADMIN$">
+<elem key="warning">Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+</table>
+<table key="\\192.168.190.45\C$">
+<elem key="warning">Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+</table>
+<table key="\\192.168.190.45\IPC$">
+<elem key="warning">Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED</elem>
+<elem key="Anonymous access">READ</elem>
+</table>
+<table key="\\192.168.190.45\USERS">
+<elem key="warning">Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+</table>
+</script><script id="smb2-security-mode" output="&#xa;  2:1:0: &#xa;    Message signing enabled but not required"><table key="2:1:0">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2023-10-28T09:52:59&#xa;  start_date: 2023-10-28T09:47:34"><elem key="date">2023-10-28T09:52:59</elem>
+<elem key="start_date">2023-10-28T09:47:34</elem>
+</script></hostscript><times srtt="345555" rttvar="345555" to="1250000"/>
+</host>
+<taskbegin task="NSE" time="1698487142"/>
+<taskend task="NSE" time="1698487142"/>
+<taskbegin task="NSE" time="1698487142"/>
+<taskend task="NSE" time="1698487142"/>
+<taskbegin task="NSE" time="1698487142"/>
+<taskend task="NSE" time="1698487142"/>
+<runstats><finished time="1698487142" timestr="Sat Oct 28 05:59:02 2023" summary="Nmap done at Sat Oct 28 05:59:02 2023; 1 IP address (1 host up) scanned in 368.50 seconds" elapsed="368.50" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

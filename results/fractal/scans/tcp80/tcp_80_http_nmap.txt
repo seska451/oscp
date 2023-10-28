@@ -1,0 +1,190 @@
+# Nmap 7.94 scan initiated Fri Oct 27 23:12:42 2023 as: nmap -vv --reason -Pn -T4 -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/src/oscp/results/fractal/scans/tcp80/tcp_80_http_nmap.txt -oX /home/kali/src/oscp/results/fractal/scans/tcp80/xml/tcp_80_http_nmap.xml fractal
+Nmap scan report for fractal (192.168.190.233)
+Host is up, received user-set (0.34s latency).
+Scanned at 2023-10-27 23:12:42 EDT for 82s
+
+PORT   STATE SERVICE REASON  VERSION
+80/tcp open  http    syn-ack Apache httpd 2.4.41 ((Ubuntu))
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-date: Sat, 28 Oct 2023 03:13:04 GMT; -1s from local time.
+|_http-title: Welcome!
+|_http-favicon: Unknown favicon MD5: 231567A8CC45C2CF966C4E8D99A5B7FD
+| http-robots.txt: 2 disallowed entries 
+|_/app_dev.php /app_dev.php/*
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; ico: 1
+|     /css/
+|       css: 2
+|     /img/
+|       jpg: 3
+|     /js/
+|       js: 3
+|   Longest directory structure:
+|     Depth: 1
+|     Dir: /img/
+|   Total files found (by extension):
+|_    Other: 1; css: 2; ico: 1; jpg: 3; js: 3
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+| http-security-headers: 
+|   Cache_Control: 
+|_    Header: Cache-Control: max-age=60, public
+|_http-fetch: Please enter the complete path of the directory to save data in.
+|_http-malware-host: Host appears to be clean
+| http-php-version: Logo query returned unknown hash 743dffa5138c2c6fb9d0c72039b05f44
+|_Credits query returned unknown hash 743dffa5138c2c6fb9d0c72039b05f44
+|_http-mobileversion-checker: No mobile version detected.
+|_http-chrono: Request times for /; avg: 902.63ms; min: 802.75ms; max: 1123.29ms
+|_http-exif-spider: ERROR: Script execution failed (use -d to debug)
+| http-headers: 
+|   Date: Sat, 28 Oct 2023 03:13:02 GMT
+|   Server: Apache/2.4.41 (Ubuntu)
+|   Cache-Control: max-age=60, public
+|   Connection: close
+|   Content-Type: text/html; charset=UTF-8
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=fractal
+|     
+|     Path: http://fractal:80/css/cover.css
+|     Line number: 1
+|     Comment: 
+|         /*
+|          * Globals
+|          */
+|     
+|     Path: http://fractal:80/css/cover.css
+|     Line number: 105
+|     Comment: 
+|         /*
+|          * Footer
+|          */
+|     
+|     Path: http://fractal:80/css/cover.css
+|     Line number: 23
+|     Comment: 
+|         /*
+|          * Base structure
+|          */
+|     
+|     Path: http://fractal:80/css/cover.css
+|     Line number: 5
+|     Comment: 
+|         /* Links */
+|     
+|     Path: http://fractal:80/css/bootstrap.min.css
+|     Line number: 7
+|     Comment: 
+|         /*# sourceMappingURL=bootstrap.min.css.map */
+|     
+|     Path: http://fractal:80/css/bootstrap.min.css
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          * Bootstrap v4.2.1 (https://getbootstrap.com/)
+|          * Copyright 2011-2018 The Bootstrap Authors
+|          * Copyright 2011-2018 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          */
+|     
+|     Path: http://fractal:80/
+|     Line number: 56
+|     Comment: 
+|         <!-- Bootstrap core JavaScript end -->
+|     
+|     Path: http://fractal:80/js/popper.min.js
+|     Line number: 5
+|     Comment: 
+|         
+|         //# sourceMappingURL=popper.min.js.map
+|     
+|     Path: http://fractal:80/
+|     Line number: 52
+|     Comment: 
+|         <!-- Bootstrap core JavaScript start -->
+|     
+|     Path: http://fractal:80/js/popper.min.js
+|     Line number: 1
+|     Comment: 
+|         /*
+|          Copyright (C) Federico Zivolo 2019
+|          Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
+|          */
+|     
+|     Path: http://fractal:80/js/bootstrap.min.js
+|     Line number: 1
+|     Comment: 
+|         /*!
+|           * Bootstrap v4.4.1 (https://getbootstrap.com/)
+|           * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+|           * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|           */
+|     
+|     Path: http://fractal:80/css/cover.css
+|     Line number: 93
+|     Comment: 
+|         /*
+|          * Cover
+|          */
+|     
+|     Path: http://fractal:80/css/cover.css
+|     Line number: 12
+|     Comment: 
+|         /* Custom default button */
+|     
+|     Path: http://fractal:80/css/cover.css
+|     Line number: 17
+|     Comment: 
+|         /* Prevent inheritance from `body` */
+|     
+|     Path: http://fractal:80/css/cover.css
+|     Line number: 50
+|     Comment: 
+|         /*
+|          * Header
+|_         */
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+|_http-feed: Couldn't find any feeds.
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-config-backup: ERROR: Script execution failed (use -d to debug)
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-errors: Couldn't find any error pages.
+| http-enum: 
+|   /robots.txt: Robots file
+|_  /phpmyadmin/: phpMyAdmin
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 27 23:14:04 2023 -- 1 IP address (1 host up) scanned in 82.55 seconds
