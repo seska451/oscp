@@ -1,4 +1,0 @@
-# Nmap 7.94 scan initiated Fri Oct 27 12:52:23 2023 as: nmap -sC -sV -Pn -F -oA nmapscan codo
-Host: 192.168.190.23 (codo)	Status: Up
-Host: 192.168.190.23 (codo)	Ports: 	Ignored State: filtered (100)
-# Nmap done at Fri Oct 27 12:52:49 2023 -- 1 IP address (1 host up) scanned in 26.67 seconds

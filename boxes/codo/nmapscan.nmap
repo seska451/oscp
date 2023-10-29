@@ -1,8 +1,0 @@
-# Nmap 7.94 scan initiated Fri Oct 27 12:52:23 2023 as: nmap -sC -sV -Pn -F -oA nmapscan codo
-Nmap scan report for codo (192.168.190.23)
-Host is up.
-All 100 scanned ports on codo (192.168.190.23) are in ignored states.
-Not shown: 100 filtered tcp ports (no-response)
-
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Oct 27 12:52:49 2023 -- 1 IP address (1 host up) scanned in 26.67 seconds
