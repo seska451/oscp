@@ -1,0 +1,72 @@
+WhatWeb report for http://manager:80
+Status    : 200 OK
+Title     : Manager
+IP        : 10.10.11.236
+Country   : RESERVED, ZZ
+
+Summary   : Bootstrap[4.3.1], HTML5, HTTPServer[Microsoft-IIS/10.0], JQuery[3.4.1], Microsoft-IIS[10.0], Script[text/javascript], X-UA-Compatible[IE=edge]
+
+Detected Plugins:
+[ Bootstrap ]
+	Bootstrap is an open source toolkit for developing with
+	HTML, CSS, and JS.
+
+	Version      : 4.3.1
+	Version      : 4.3.1
+	Website     : https://getbootstrap.com/
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	String       : Microsoft-IIS/10.0 (from server string)
+
+[ JQuery ]
+	A fast, concise, JavaScript that simplifies how to traverse
+	HTML documents, handle events, perform animations, and add
+	AJAX.
+
+	Version      : 3.4.1
+	Website     : http://jquery.com/
+
+[ Microsoft-IIS ]
+	Microsoft Internet Information Services (IIS) for Windows
+	Server is a flexible, secure and easy-to-manage Web server
+	for hosting anything on the Web. From media streaming to
+	web application hosting, IIS's scalable and open
+	architecture is ready to handle the most demanding tasks.
+
+	Version      : 10.0
+	Website     : http://www.iis.net/
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+	String       : text/javascript
+
+[ X-UA-Compatible ]
+	This plugin retrieves the X-UA-Compatible value from the
+	HTTP header and meta http-equiv tag. - More Info:
+	http://msdn.microsoft.com/en-us/library/cc817574.aspx
+
+	String       : IE=edge
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Content-Type: text/html
+	Content-Encoding: gzip
+	Last-Modified: Thu, 27 Jul 2023 16:02:39 GMT
+	Accept-Ranges: bytes
+	ETag: "803951c4a3c0d91:0"
+	Vary: Accept-Encoding
+	Server: Microsoft-IIS/10.0
+	Date: Sun, 29 Oct 2023 19:07:47 GMT
+	Connection: close
+	Content-Length: 2921
+
+

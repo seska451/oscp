@@ -1,44 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE nmaprun>
 <?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
-<!-- Nmap 7.94 scan initiated Fri Oct 27 22:42:21 2023 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/src/oscp/results/localhost/scans/_full_tcp_nmap.txt -oX /home/kali/src/oscp/results/localhost/scans/xml/_full_tcp_nmap.xml localhost -->
-<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/src/oscp/results/localhost/scans/_full_tcp_nmap.txt -oX /home/kali/src/oscp/results/localhost/scans/xml/_full_tcp_nmap.xml localhost" start="1698460941" startstr="Fri Oct 27 22:42:21 2023" version="7.94" xmloutputversion="1.05">
+<!-- Nmap 7.94 scan initiated Sun Oct 29 08:03:24 2023 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/src/oscp/results/localhost/scans/_full_tcp_nmap.txt -oX /home/kali/src/oscp/results/localhost/scans/xml/_full_tcp_nmap.xml localhost -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/src/oscp/results/localhost/scans/_full_tcp_nmap.txt -oX /home/kali/src/oscp/results/localhost/scans/xml/_full_tcp_nmap.xml localhost" start="1698581004" startstr="Sun Oct 29 08:03:24 2023" version="7.94" xmloutputversion="1.05">
 <scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
 <verbose level="2"/>
 <debugging level="0"/>
-<taskbegin task="NSE" time="1698460942"/>
-<taskend task="NSE" time="1698460942"/>
-<taskbegin task="NSE" time="1698460942"/>
-<taskend task="NSE" time="1698460942"/>
-<taskbegin task="NSE" time="1698460942"/>
-<taskend task="NSE" time="1698460942"/>
-<taskbegin task="Connect Scan" time="1698460942"/>
-<taskend task="Connect Scan" time="1698460944" extrainfo="65535 total ports"/>
-<taskbegin task="Service scan" time="1698460944"/>
-<taskbegin task="NSE" time="1698460944"/>
-<taskend task="NSE" time="1698460944"/>
-<taskbegin task="NSE" time="1698460944"/>
-<taskend task="NSE" time="1698460944"/>
-<taskbegin task="NSE" time="1698460944"/>
-<taskend task="NSE" time="1698460944"/>
-<host starttime="1698460942" endtime="1698460944"><status state="up" reason="user-set" reason_ttl="0"/>
-<address addr="127.0.0.1" addrtype="ipv4"/>
-<hostnames>
-<hostname name="localhost" type="user"/>
-<hostname name="localhost" type="PTR"/>
-</hostnames>
-<ports><extraports state="closed" count="65535">
-<extrareasons reason="conn-refused" count="65535" proto="tcp" ports="1-65535"/>
-</extraports>
-</ports>
-<times srtt="57" rttvar="39" to="100000"/>
-</host>
-<taskbegin task="NSE" time="1698460944"/>
-<taskend task="NSE" time="1698460944"/>
-<taskbegin task="NSE" time="1698460944"/>
-<taskend task="NSE" time="1698460944"/>
-<taskbegin task="NSE" time="1698460944"/>
-<taskend task="NSE" time="1698460944"/>
-<runstats><finished time="1698460944" timestr="Fri Oct 27 22:42:24 2023" summary="Nmap done at Fri Oct 27 22:42:24 2023; 1 IP address (1 host up) scanned in 2.44 seconds" elapsed="2.44" exit="success"/><hosts up="1" down="0" total="1"/>
-</runstats>
-</nmaprun>
+<taskbegin task="NSE" time="1698581005"/>
+<taskend task="NSE" time="1698581005"/>
+<taskbegin task="NSE" time="1698581005"/>
+<taskend task="NSE" time="1698581005"/>
+<taskbegin task="NSE" time="1698581005"/>
+<taskend task="NSE" time="1698581005"/>
+<taskbegin task="Connect Scan" time="1698581005"/>
+<taskend task="Connect Scan" time="1698581006" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1698581006"/>

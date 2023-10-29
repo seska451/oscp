@@ -1,0 +1,1 @@
+# Nmap 7.94 scan initiated Sun Oct 29 08:05:26 2023 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN /home/kali/src/oscp/results/manager/scans/_full_tcp_nmap.txt -oX /home/kali/src/oscp/results/manager/scans/xml/_full_tcp_nmap.xml manager

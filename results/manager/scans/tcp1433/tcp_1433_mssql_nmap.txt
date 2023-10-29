@@ -1,0 +1,123 @@
+# Nmap 7.94 scan initiated Sun Oct 29 08:07:14 2023 as: nmap -vv --reason -Pn -T4 -sV -p 1433 "--script=banner,(ms-sql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args=mssql.instance-port=1433,mssql.username=sa,mssql.password=sa -oN /home/kali/src/oscp/results/manager/scans/tcp1433/tcp_1433_mssql_nmap.txt -oX /home/kali/src/oscp/results/manager/scans/tcp1433/xml/tcp_1433_mssql_nmap.xml manager
+Nmap scan report for manager (10.10.11.236)
+Host is up, received user-set (0.13s latency).
+Scanned at 2023-10-29 08:07:16 EDT for 88s
+
+Bug in ms-sql-dac: no string output.
+Bug in ms-sql-hasdbaccess: no string output.
+PORT     STATE SERVICE  REASON  VERSION
+1433/tcp open  ms-sql-s syn-ack Microsoft SQL Server 2019 15.00.2000.00; RTM
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+| ms-sql-empty-password: 
+|   10.10.11.236:1433: 
+|_    'sa' account password is not blank.
+| ms-sql-tables: 
+|   10.10.11.236:1433: 
+|_[10.10.11.236:1433]
+| ms-sql-config: 
+|   10.10.11.236:1433: 
+|_  ERROR: Bad username or password
+| ms-sql-query: 
+|_  (Use --script-args=ms-sql-query.query='<QUERY>' to change query.)
+| ms-sql-info: 
+|   10.10.11.236:1433: 
+|     Version: 
+|       name: Microsoft SQL Server 2019 RTM
+|       number: 15.00.2000.00
+|       Product: Microsoft SQL Server 2019
+|       Service pack level: RTM
+|       Post-SP patches applied: false
+|_    TCP port: 1433
+| ms-sql-dump-hashes: 
+|_  10.10.11.236:1433: ERROR: Bad username or password
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Issuer: commonName=SSL_Self_Signed_Fallback
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2023-10-28T22:41:34
+| Not valid after:  2053-10-28T22:41:34
+| MD5:   2f41:325d:4947:588a:ad4c:32ce:c3cc:c694
+| SHA-1: 548d:19a4:650d:a130:b704:553d:720e:0d56:274d:731d
+| -----BEGIN CERTIFICATE-----
+| MIIDADCCAeigAwIBAgIQaPakKZHz65hNHgW0ngVZuDANBgkqhkiG9w0BAQsFADA7
+| MTkwNwYDVQQDHjAAUwBTAEwAXwBTAGUAbABmAF8AUwBpAGcAbgBlAGQAXwBGAGEA
+| bABsAGIAYQBjAGswIBcNMjMxMDI4MjI0MTM0WhgPMjA1MzEwMjgyMjQxMzRaMDsx
+| OTA3BgNVBAMeMABTAFMATABfAFMAZQBsAGYAXwBTAGkAZwBuAGUAZABfAEYAYQBs
+| AGwAYgBhAGMAazCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAPItY+0g
+| 3QH/fZK+rZJGKJ71oiBSzRyTEpzGGs7cwYmGUVV4EsQz5motg3fF0GYvzgSKtWbU
+| +OzKzGjhwOcoHjRYr6NnzB4thxytlORscjlxCo8a7xqXexeATg5hDU556/F0rASB
+| jvC3TyVm83zbEAf9scDP1En4jAa/29KErn0J6jj1/NUBnR3yixT7eySxIxfl6u5M
+| RBCq7KzH2G9QD0VIdJ+hBUvSjIZB07H2g/AFfMu5FkGNHn+fM5UZfuX1HAqa3rIK
+| MNBk03uKsVY2j3JiXkulNOqS/ega66Mf8qaAOedNKU4cdnkvk5wjnu2URIgSjp6I
+| 22T0mFABJWZZzuUCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEA4mhXRU24RMvPqwXh
+| LHuji+ZOxMAYS3BBUCiZ4z950nC0GTGqQJIFjp+BHwB/Ye5qsDCcN/MKw2nmeBFE
+| g3zheTIWsGXiKxVm8S9Tb7xI1KKC5nuGhhCWqFaitULHNBcNo6LY+MW1p2IBe9T9
+| Gbwu8y6OcfzHZzoC7wW9i2ynYe0D8+213VSD/yZUj3xTM7a1unRwiH0ckKziXjvA
+| fhZybvhDn2sfzaW57IOYo7QvEs3wei/cPx7oNgkn+G5OA56xXV5HTAMsWkEd2KAD
+| 3hZ2L1TYWwT2uT8VuzMlum/Snw2LaJS6GYx8kRYQkivJfHwymZPrscgZXmiH0F+T
+| 5U/IgA==
+|_-----END CERTIFICATE-----
+|_ssl-date: 2023-10-29T19:07:42+00:00; +7h00m02s from scanner time.
+| ms-sql-xp-cmdshell: 
+|_  (Use --script-args=ms-sql-xp-cmdshell.cmd='<CMD>' to change command.)
+| ms-sql-ntlm-info: 
+|   10.10.11.236:1433: 
+|     Target_Name: MANAGER
+|     NetBIOS_Domain_Name: MANAGER
+|     NetBIOS_Computer_Name: DC01
+|     DNS_Domain_Name: manager.htb
+|     DNS_Computer_Name: dc01.manager.htb
+|     DNS_Tree_Name: manager.htb
+|_    Product_Version: 10.0.17763
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Oct 29 08:08:44 2023 -- 1 IP address (1 host up) scanned in 90.24 seconds

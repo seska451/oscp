@@ -1,0 +1,5 @@
+
+; <<>> DiG 9.18.16-1-Debian <<>> AXFR -p 53 @manager manager
+; (1 server found)
+;; global options: +cmd
+; Transfer failed.

@@ -1,0 +1,220 @@
+# Nmap 7.94 scan initiated Sun Oct 29 08:07:13 2023 as: nmap -vv --reason -Pn -T4 -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/src/oscp/results/manager/scans/tcp80/tcp_80_http_nmap.txt -oX /home/kali/src/oscp/results/manager/scans/tcp80/xml/tcp_80_http_nmap.xml manager
+Nmap scan report for manager (10.10.11.236)
+Host is up, received user-set (0.15s latency).
+Scanned at 2023-10-29 08:07:15 EDT for 284s
+
+Bug in http-security-headers: no string output.
+PORT   STATE SERVICE REASON  VERSION
+80/tcp open  http    syn-ack Microsoft IIS httpd 10.0
+| http-vhosts: 
+|_128 names had status 200
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+| http-fileupload-exploiter: 
+|   
+|_    Couldn't find a file-type field.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-date: Sun, 29 Oct 2023 19:07:44 GMT; +6h59m56s from local time.
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+|_http-config-backup: ERROR: Script execution failed (use -d to debug)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-malware-host: Host appears to be clean
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=manager
+|     
+|     Path: http://manager:80/
+|     Line number: 153
+|     Comment: 
+|         <!-- about section -->
+|     
+|     Path: http://manager:80/
+|     Line number: 282
+|     Comment: 
+|         <!-- end service section -->
+|     
+|     Path: http://manager:80/
+|     Line number: 150
+|     Comment: 
+|         <!-- end slider section -->
+|     
+|     Path: http://manager:80/
+|     Line number: 5
+|     Comment: 
+|         <!-- Basic -->
+|     
+|     Path: http://manager:80/
+|     Line number: 17
+|     Comment: 
+|         <!-- slider stylesheet -->
+|     
+|     Path: http://manager:80/
+|     Line number: 8
+|     Comment: 
+|         <!-- Mobile Metas -->
+|     
+|     Path: http://manager:80/
+|     Line number: 342
+|     Comment: 
+|         <!-- end contact section -->
+|     
+|     Path: http://manager:80/
+|     Line number: 187
+|     Comment: 
+|         <!-- service section -->
+|     
+|     Path: http://manager:80/
+|     Line number: 38
+|     Comment: 
+|         <!-- header section strats -->
+|     
+|     Path: http://manager:80/
+|     Line number: 284
+|     Comment: 
+|         <!-- quote section -->
+|     
+|     Path: http://manager:80/
+|     Line number: 493
+|     Comment: 
+|         <!-- footer section -->
+|     
+|     Path: http://manager:80/
+|     Line number: 77
+|     Comment: 
+|         <!-- slider section -->
+|     
+|     Path: http://manager:80/
+|     Line number: 25
+|     Comment: 
+|         <!-- bootstrap core css -->
+|     
+|     Path: http://manager:80/
+|     Line number: 76
+|     Comment: 
+|         <!-- end header section -->
+|     
+|     Path: http://manager:80/
+|     Line number: 459
+|     Comment: 
+|         <!-- end client section -->
+|     
+|     Path: http://manager:80/
+|     Line number: 491
+|     Comment: 
+|         <!-- end info section -->
+|     
+|     Path: http://manager:80/
+|     Line number: 22
+|     Comment: 
+|         <!-- font wesome stylesheet -->
+|     
+|     Path: http://manager:80/
+|     Line number: 462
+|     Comment: 
+|         <!-- info section -->
+|     
+|     Path: http://manager:80/
+|     Line number: 344
+|     Comment: 
+|         <!-- client section -->
+|     
+|     Path: http://manager:80/
+|     Line number: 309
+|     Comment: 
+|         <!-- contact section -->
+|     
+|     Path: http://manager:80/
+|     Line number: 32
+|     Comment: 
+|         <!-- responsive style -->
+|     
+|     Path: http://manager:80/
+|     Line number: 30
+|     Comment: 
+|         <!-- Custom styles for this template -->
+|     
+|     Path: http://manager:80/
+|     Line number: 28
+|     Comment: 
+|         <!-- fonts style -->
+|     
+|     Path: http://manager:80/
+|     Line number: 10
+|     Comment: 
+|         <!-- Site Metas -->
+|     
+|     Path: http://manager:80/
+|     Line number: 184
+|     Comment: 
+|         <!-- end about section -->
+|     
+|     Path: http://manager:80/
+|     Line number: 306
+|     Comment: 
+|_        <!-- end quote section -->
+| http-php-version: Logo query returned unknown hash 3a5d6fbf932375e84ac8a0ce14a04aac
+|_Credits query returned unknown hash 3a5d6fbf932375e84ac8a0ce14a04aac
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=manager
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://manager:80/
+|     Form id: 
+|_    Form action: 
+|_http-chrono: Request times for /; avg: 2149.57ms; min: 1160.56ms; max: 4721.70ms
+|_http-fetch: Please enter the complete path of the directory to save data in.
+|_http-feed: Couldn't find any feeds.
+|_http-errors: Couldn't find any error pages.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    Other: 1
+|_http-exif-spider: ERROR: Script execution failed (use -d to debug)
+|_http-mobileversion-checker: No mobile version detected.
+|_http-title: Manager
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+| http-headers: 
+|   Content-Length: 18203
+|   Content-Type: text/html
+|   Last-Modified: Thu, 27 Jul 2023 16:02:39 GMT
+|   Accept-Ranges: bytes
+|   ETag: "1c67a5c4a3c0d91:0"
+|   Server: Microsoft-IIS/10.0
+|   Date: Sun, 29 Oct 2023 19:07:43 GMT
+|   Connection: close
+|   
+|_  (Request type: HEAD)
+|_http-server-header: Microsoft-IIS/10.0
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Oct 29 08:11:59 2023 -- 1 IP address (1 host up) scanned in 285.83 seconds

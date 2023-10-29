@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Sun Oct 29 08:07:14 2023 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/src/oscp/results/manager/scans/tcp445/tcp_445_smb_nmap.txt -oX /home/kali/src/oscp/results/manager/scans/tcp445/xml/tcp_445_smb_nmap.xml manager -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/src/oscp/results/manager/scans/tcp445/tcp_445_smb_nmap.txt -oX /home/kali/src/oscp/results/manager/scans/tcp445/xml/tcp_445_smb_nmap.xml manager" start="1698581234" startstr="Sun Oct 29 08:07:14 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="445"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1698581236"/>
+<taskend task="NSE" time="1698581236"/>
+<taskbegin task="NSE" time="1698581236"/>
+<taskend task="NSE" time="1698581236"/>
+<taskbegin task="NSE" time="1698581236"/>
+<taskend task="NSE" time="1698581236"/>
+<taskbegin task="Connect Scan" time="1698581236"/>
+<taskend task="Connect Scan" time="1698581236" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1698581237"/>
+<taskend task="Service scan" time="1698581244" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1698581244"/>
+<taskprogress task="NSE" time="1698581275" percent="81.69" remaining="7" etc="1698581282"/>
+<taskend task="NSE" time="1698581303"/>
+<taskbegin task="NSE" time="1698581303"/>
+<taskend task="NSE" time="1698581305"/>
+<taskbegin task="NSE" time="1698581305"/>
+<taskend task="NSE" time="1698581305"/>
+<host starttime="1698581236" endtime="1698581305"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.11.236" addrtype="ipv4"/>
+<hostnames>
+<hostname name="manager" type="user"/>
+<hostname name="manager" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/><script id="smb-enum-services" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<hostscript><script id="smb2-capabilities" output="&#xa;  2:0:2: &#xa;    Distributed File System&#xa;  2:1:0: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3:0:0: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3:0:2: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3:1:1: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations"><table key="2:0:2">
+<elem>Distributed File System</elem>
+</table>
+<table key="2:1:0">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3:0:0">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3:0:2">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3:1:1">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+</script><script id="smb2-security-mode" output="&#xa;  3:1:1: &#xa;    Message signing enabled and required"><table key="3:1:1">
+<elem>Message signing enabled and required</elem>
+</table>
+</script><script id="smb-vuln-ms10-061" output="Could not negotiate a connection:SMB: Failed to receive bytes: ERROR">false</script><script id="smb-print-text" output="false">false</script><script id="smb-mbenum" output="&#xa;  ERROR: Failed to connect to browser service: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR"/><script id="smb2-time" output="&#xa;  date: 2023-10-29T19:07:51&#xa;  start_date: N/A"><elem key="date">2023-10-29T19:07:51</elem>
+<elem key="start_date">N/A</elem>
+</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    2:0:2&#xa;    2:1:0&#xa;    3:0:0&#xa;    3:0:2&#xa;    3:1:1"><table key="dialects">
+<elem>2:0:2</elem>
+<elem>2:1:0</elem>
+<elem>3:0:0</elem>
+<elem>3:0:2</elem>
+<elem>3:1:1</elem>
+</table>
+</script></hostscript><times srtt="135504" rttvar="135504" to="677520"/>
+</host>
+<taskbegin task="NSE" time="1698581305"/>
+<taskend task="NSE" time="1698581305"/>
+<taskbegin task="NSE" time="1698581305"/>
+<taskend task="NSE" time="1698581305"/>
+<taskbegin task="NSE" time="1698581305"/>
+<taskend task="NSE" time="1698581305"/>
+<runstats><finished time="1698581305" timestr="Sun Oct 29 08:08:25 2023" summary="Nmap done at Sun Oct 29 08:08:25 2023; 1 IP address (1 host up) scanned in 71.54 seconds" elapsed="71.54" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

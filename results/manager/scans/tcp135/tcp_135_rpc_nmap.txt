@@ -1,0 +1,12 @@
+# Nmap 7.94 scan initiated Sun Oct 29 08:07:13 2023 as: nmap -vv --reason -Pn -T4 -sV -p 135 --script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/kali/src/oscp/results/manager/scans/tcp135/tcp_135_rpc_nmap.txt -oX /home/kali/src/oscp/results/manager/scans/tcp135/xml/tcp_135_rpc_nmap.xml manager
+Nmap scan report for manager (10.10.11.236)
+Host is up, received user-set (0.083s latency).
+Scanned at 2023-10-29 08:07:15 EDT for 23s
+
+PORT    STATE SERVICE REASON  VERSION
+135/tcp open  msrpc   syn-ack Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Oct 29 08:07:38 2023 -- 1 IP address (1 host up) scanned in 24.93 seconds
