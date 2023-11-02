@@ -1,0 +1,4 @@
+Found: gc._msdcs.manager.htb
+Found: domaindnszones.manager.htb
+Found: forestdnszones.manager.htb
+Found: dc01.manager.htb

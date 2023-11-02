@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Wed Nov  1 08:50:25 2023 as: nmap -vv -&#45;reason -Pn -T4 -sU -sV -p 88 -&#45;script=banner,krb5-enum-users -oN /home/kali/src/oscp/results/manager.htb/scans/udp88/udp_88_kerberos_nmap.txt -oX /home/kali/src/oscp/results/manager.htb/scans/udp88/xml/udp_88_kerberos_nmap.xml manager.htb -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sU -sV -p 88 -&#45;script=banner,krb5-enum-users -oN /home/kali/src/oscp/results/manager.htb/scans/udp88/udp_88_kerberos_nmap.txt -oX /home/kali/src/oscp/results/manager.htb/scans/udp88/xml/udp_88_kerberos_nmap.xml manager.htb" start="1698790825" startstr="Wed Nov  1 08:50:25 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="udp" protocol="udp" numservices="1" services="88"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1698790825"/>
+<taskend task="NSE" time="1698790825"/>
+<taskbegin task="NSE" time="1698790825"/>
+<taskend task="NSE" time="1698790825"/>
+<taskbegin task="UDP Scan" time="1698790825"/>
+<taskend task="UDP Scan" time="1698790825" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1698790825"/>
+<taskbegin task="NSE" time="1698790825"/>
+<taskend task="NSE" time="1698790825"/>
+<taskbegin task="NSE" time="1698790825"/>
+<taskend task="NSE" time="1698790825"/>
+<host starttime="1698790825" endtime="1698790825"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.11.236" addrtype="ipv4"/>
+<hostnames>
+<hostname name="manager.htb" type="user"/>
+<hostname name="manager" type="PTR"/>
+</hostnames>
+<ports><port protocol="udp" portid="88"><state state="open" reason="udp-response" reason_ttl="127"/><service name="kerberos-sec" product="Microsoft Windows Kerberos" extrainfo="server time: 2023-10-31 22:24:23Z" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:kerberos</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<times srtt="60292" rttvar="60292" to="301460"/>
+</host>
+<taskbegin task="NSE" time="1698790825"/>
+<taskend task="NSE" time="1698790825"/>
+<taskbegin task="NSE" time="1698790825"/>
+<taskend task="NSE" time="1698790825"/>
+<runstats><finished time="1698790825" timestr="Wed Nov  1 08:50:25 2023" summary="Nmap done at Wed Nov  1 08:50:25 2023; 1 IP address (1 host up) scanned in 0.38 seconds" elapsed="0.38" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

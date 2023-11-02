@@ -1,0 +1,24 @@
+nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN "/home/kali/src/oscp/results/craft/scans/_quick_tcp_nmap.txt" -oX "/home/kali/src/oscp/results/craft/scans/xml/_quick_tcp_nmap.xml" craft
+
+nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN "/home/kali/src/oscp/results/craft/scans/_full_tcp_nmap.txt" -oX "/home/kali/src/oscp/results/craft/scans/xml/_full_tcp_nmap.xml" craft
+
+nmap -vv --reason -Pn -T4 -sU -A --top-ports 100 -oN "/home/kali/src/oscp/results/craft/scans/_top_100_udp_nmap.txt" -oX "/home/kali/src/oscp/results/craft/scans/xml/_top_100_udp_nmap.xml" craft
+
+feroxbuster -u http://craft:80/ -t 10 -w /root/.local/share/AutoRecon/wordlists/dirbuster.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -q -e -r -o "/home/kali/src/oscp/results/craft/scans/tcp80/tcp_80_http_feroxbuster_dirbuster.txt"
+
+curl -sSikf http://craft:80/.well-known/security.txt
+
+curl -sSikf http://craft:80/robots.txt
+
+curl -sSik http://craft:80/
+
+nikto -ask=no -Tuning=x4567890ac -nointeractive -host http://craft:80 2>&1 | tee "/home/kali/src/oscp/results/craft/scans/tcp80/tcp_80_http_nikto.txt"
+
+nmap -vv --reason -Pn -T4 -sV -p 80 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/src/oscp/results/craft/scans/tcp80/tcp_80_http_nmap.txt" -oX "/home/kali/src/oscp/results/craft/scans/tcp80/xml/tcp_80_http_nmap.xml" craft
+
+ffuf -u http://craft:80/ -t 10 -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt -H "Host: FUZZ.craft" -mc all -fs 9635 -r -noninteractive -s | tee "/home/kali/src/oscp/results/craft/scans/tcp80/tcp_80_http_craft_vhosts_subdomains-top1million-110000.txt"
+
+whatweb --color=never --no-errors -a 3 -v http://craft:80 2>&1
+
+wkhtmltoimage --format png http://craft:80/ /home/kali/src/oscp/results/craft/scans/tcp80/tcp_80_http_screenshot.png
+

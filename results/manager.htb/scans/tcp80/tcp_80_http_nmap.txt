@@ -1,0 +1,295 @@
+# Nmap 7.94 scan initiated Wed Nov  1 08:24:15 2023 as: nmap -vv --reason -Pn -T4 -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/src/oscp/results/manager.htb/scans/tcp80/tcp_80_http_nmap.txt -oX /home/kali/src/oscp/results/manager.htb/scans/tcp80/xml/tcp_80_http_nmap.xml manager.htb
+Nmap scan report for manager.htb (10.10.11.236)
+Host is up, received user-set (0.063s latency).
+rDNS record for 10.10.11.236: manager
+Scanned at 2023-11-01 08:24:17 ACDT for 146s
+
+Bug in http-security-headers: no string output.
+PORT   STATE SERVICE REASON          VERSION
+80/tcp open  http    syn-ack ttl 127 Microsoft IIS httpd 10.0
+| http-vhosts: 
+|_128 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-date: Tue, 31 Oct 2023 21:55:39 GMT; +1m19s from local time.
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; html: 2
+|     /css/
+|       css: 1
+|     /images/
+|       png: 2
+|   Longest directory structure:
+|     Depth: 1
+|     Dir: /css/
+|   Total files found (by extension):
+|_    Other: 1; css: 1; html: 2; png: 2
+|_http-errors: Couldn't find any error pages.
+|_http-server-header: Microsoft-IIS/10.0
+|_http-mobileversion-checker: No mobile version detected.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-exif-spider: ERROR: Script execution failed (use -d to debug)
+|_http-malware-host: Host appears to be clean
+|_http-feed: Couldn't find any feeds.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=manager.htb
+|     
+|     Path: http://manager.htb:80/
+|     Line number: 284
+|     Comment: 
+|         <!-- quote section -->
+|     
+|     Path: http://manager.htb:80/css/style.css
+|     Line number: 136
+|     Comment: 
+|         /* slider section */
+|     
+|     Path: http://manager.htb:80/contact.html
+|     Line number: 151
+|     Comment: 
+|         <!-- footer section -->
+|     
+|     Path: http://manager.htb:80/
+|     Line number: 282
+|     Comment: 
+|         <!-- end service section -->
+|     
+|     Path: http://manager.htb:80/
+|     Line number: 187
+|     Comment: 
+|         <!-- service section -->
+|     
+|     Path: http://manager.htb:80/contact.html
+|     Line number: 8
+|     Comment: 
+|         <!-- Mobile Metas -->
+|     
+|     Path: http://manager.htb:80/css/style.css
+|     Line number: 593
+|     Comment: 
+|         /* footer section*/
+|     
+|     Path: http://manager.htb:80/css/style.css
+|     Line number: 552
+|     Comment: 
+|         /* end client_section */
+|     
+|     Path: http://manager.htb:80/contact.html
+|     Line number: 32
+|     Comment: 
+|         <!-- responsive style -->
+|     
+|     Path: http://manager.htb:80/
+|     Line number: 150
+|     Comment: 
+|         <!-- end slider section -->
+|     
+|     Path: http://manager.htb:80/css/bootstrap.css
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          * Bootstrap v4.3.1 (https://getbootstrap.com/)
+|          * Copyright 2011-2019 The Bootstrap Authors
+|          * Copyright 2011-2019 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          */
+|     
+|     Path: http://manager.htb:80/css/style.css
+|     Line number: 614
+|     Comment: 
+|         /*# sourceMappingURL=style.css.map */
+|     
+|     Path: http://manager.htb:80/css/style.css
+|     Line number: 44
+|     Comment: 
+|         /*header section*/
+|     
+|     Path: http://manager.htb:80/css/style.css
+|     Line number: 135
+|     Comment: 
+|         /*end header section*/
+|     
+|     Path: http://manager.htb:80/contact.html
+|     Line number: 149
+|     Comment: 
+|         <!-- end info section -->
+|     
+|     Path: http://manager.htb:80/
+|     Line number: 344
+|     Comment: 
+|         <!-- client section -->
+|     
+|     Path: http://manager.htb:80/contact.html
+|     Line number: 76
+|     Comment: 
+|         <!-- end header section -->
+|     
+|     Path: http://manager.htb:80/about.html
+|     Line number: 79
+|     Comment: 
+|         <!-- about section -->
+|     
+|     Path: http://manager.htb:80/contact.html
+|     Line number: 5
+|     Comment: 
+|         <!-- Basic -->
+|     
+|     Path: http://manager.htb:80/contact.html
+|     Line number: 17
+|     Comment: 
+|         <!-- slider stylesheet -->
+|     
+|     Path: http://manager.htb:80/css/bootstrap.css
+|     Line number: 10038
+|     Comment: 
+|         /*# sourceMappingURL=bootstrap.css.map */
+|     
+|     Path: http://manager.htb:80/css/style.css
+|     Line number: 613
+|     Comment: 
+|         /* end footer section*/
+|     
+|     Path: http://manager.htb:80/contact.html
+|     Line number: 22
+|     Comment: 
+|         <!-- font wesome stylesheet -->
+|     
+|     Path: http://manager.htb:80/contact.html
+|     Line number: 30
+|     Comment: 
+|         <!-- Custom styles for this template -->
+|     
+|     Path: http://manager.htb:80/
+|     Line number: 306
+|     Comment: 
+|         <!-- end quote section -->
+|     
+|     Path: http://manager.htb:80/about.html
+|     Line number: 110
+|     Comment: 
+|         <!-- end about section -->
+|     
+|     Path: http://manager.htb:80/contact.html
+|     Line number: 84
+|     Comment: 
+|         <!-- contact section -->
+|     
+|     Path: http://manager.htb:80/contact.html
+|     Line number: 38
+|     Comment: 
+|         <!-- header section strats -->
+|     
+|     Path: http://manager.htb:80/contact.html
+|     Line number: 25
+|     Comment: 
+|         <!-- bootstrap core css -->
+|     
+|     Path: http://manager.htb:80/
+|     Line number: 77
+|     Comment: 
+|         <!-- slider section -->
+|     
+|     Path: http://manager.htb:80/contact.html
+|     Line number: 10
+|     Comment: 
+|         <!-- Site Metas -->
+|     
+|     Path: http://manager.htb:80/contact.html
+|     Line number: 120
+|     Comment: 
+|         <!-- info section -->
+|     
+|     Path: http://manager.htb:80/css/style.css
+|     Line number: 455
+|     Comment: 
+|         /* client_section */
+|     
+|     Path: http://manager.htb:80/
+|     Line number: 459
+|     Comment: 
+|         <!-- end client section -->
+|     
+|     Path: http://manager.htb:80/contact.html
+|     Line number: 117
+|     Comment: 
+|         <!-- end contact section -->
+|     
+|     Path: http://manager.htb:80/contact.html
+|     Line number: 28
+|     Comment: 
+|         <!-- fonts style -->
+|     
+|     Path: http://manager.htb:80/css/style.css
+|     Line number: 282
+|     Comment: 
+|_        /* end slider section */
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-title: Manager
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-php-version: Logo query returned unknown hash 3a5d6fbf932375e84ac8a0ce14a04aac
+|_Credits query returned unknown hash 3a5d6fbf932375e84ac8a0ce14a04aac
+|_http-fetch: Please enter the complete path of the directory to save data in.
+|_http-config-backup: ERROR: Script execution failed (use -d to debug)
+| http-headers: 
+|   Content-Length: 18203
+|   Content-Type: text/html
+|   Last-Modified: Thu, 27 Jul 2023 16:02:39 GMT
+|   Accept-Ranges: bytes
+|   ETag: "1c67a5c4a3c0d91:0"
+|   Server: Microsoft-IIS/10.0
+|   Date: Tue, 31 Oct 2023 21:55:38 GMT
+|   Connection: close
+|   
+|_  (Request type: HEAD)
+|_http-chrono: Request times for /; avg: 325.50ms; min: 245.53ms; max: 447.81ms
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=manager.htb
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://manager.htb:80/
+|     Form id: 
+|     Form action: 
+|     
+|     Path: http://manager.htb:80/contact.html
+|     Form id: 
+|_    Form action: 
+| http-fileupload-exploiter: 
+|   
+|     Couldn't find a file-type field.
+|   
+|     Couldn't find a file-type field.
+|   
+|_    Couldn't find a file-type field.
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  1 08:26:43 2023 -- 1 IP address (1 host up) scanned in 148.13 seconds

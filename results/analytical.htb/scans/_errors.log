@@ -1,0 +1,12 @@
+[*] Service scan wkhtmltoimage (tcp/80/http/wkhtmltoimage) ran a command which returned a non-zero exit code (1).
+[-] Command: wkhtmltoimage --format png http://analytical.htb:80/ /home/kali/src/oscp/results/analytical.htb/scans/tcp80/tcp_80_http_screenshot.png
+[-] Error Output:
+Loading page (1/2)
+[>                                                           ] 0%[==================>                                         ] 30%[==================>                                         ] 31%[=====================>                                      ] 36%Error: Failed to load http://analytical.htb/js/owl.carousel.js, with network status code 203 and http status code 404 - Error transferring http://analytical.htb/js/owl.carousel.js - server replied: Not Found
+[=======================>                                    ] 39%[========================>                                   ] 41%[=========================>                                  ] 43%[==========================>                                 ] 44%[==========================>                                 ] 44%[===========================>                                ] 45%Error: Failed to load http://analytical.htb/css/css/font-awesome.min.css, with network status code 203 and http status code 404 - Error transferring http://analytical.htb/css/css/font-awesome.min.css - server replied: Not Found
+Error: Failed to load http://analytical.htb/css/swiper.min.css, with network status code 203 and http status code 404 - Error transferring http://analytical.htb/css/swiper.min.css - server replied: Not Found
+[===========================>                                ] 46%[============================>                               ] 47%[=================================>                          ] 56%[======================================>                     ] 64%[==========================================>                 ] 70%[==============================================>             ] 77%[==================================================>         ] 84%[====================================================>       ] 87%[=====================================================>      ] 89%[============================================================] 100%Rendering (2/2)
+[>                                                           ] 0%[===============>                                            ] 25%[============================================================] 100%Done
+Exit with code 1 due to network error: ContentNotFoundError
+
+

@@ -1,0 +1,498 @@
+# Nmap 7.94 scan initiated Fri Nov  3 00:57:33 2023 as: nmap -vv --reason -Pn -T4 -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/src/oscp/results/analytical.htb/scans/tcp80/tcp_80_http_nmap.txt -oX /home/kali/src/oscp/results/analytical.htb/scans/tcp80/xml/tcp_80_http_nmap.xml analytical.htb
+Nmap scan report for analytical.htb (10.129.47.200)
+Host is up, received user-set (0.12s latency).
+Scanned at 2023-11-03 00:57:33 ACDT for 307s
+
+Bug in http-security-headers: no string output.
+PORT   STATE SERVICE REASON  VERSION
+80/tcp open  http    syn-ack nginx 1.18.0 (Ubuntu)
+|_http-title: Analytical
+| http-vhosts: 
+| mail.htb
+|_127 names had status 302
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+| http-php-version: Logo query returned unknown hash 15780e8f631043b5f3ae20a80b77027d
+|_Credits query returned unknown hash 15780e8f631043b5f3ae20a80b77027d
+|_http-chrono: Request times for /; avg: 500.20ms; min: 425.55ms; max: 643.11ms
+|_http-errors: Couldn't find any error pages.
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+|_http-feed: Couldn't find any feeds.
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=analytical.htb
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://analytical.htb:80/
+|     Form id: comment
+|_    Form action: #
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+|_http-config-backup: ERROR: Script execution failed (use -d to debug)
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=analytical.htb
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 342
+|     Comment: 
+|         
+|         	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 30
+|     Comment: 
+|         
+|         	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 114
+|     Comment: 
+|         <!-- about section end -->
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 65
+|     Comment: 
+|         
+|         	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 133
+|     Comment: 
+|         
+|         	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 273
+|     Comment: 
+|         
+|         	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 80
+|     Comment: 
+|         
+|         	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+|     
+|     Path: http://analytical.htb:80/css/responsive.css
+|     Line number: 4
+|     Comment: 
+|         /*------------------------------------------------------------------- 991px x 768px ---------------------------------------------------------------------*/
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 51
+|     Comment: 
+|         <!-- banner section end -->
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 333
+|     Comment: 
+|         <!-- footer section end -->
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 115
+|     Comment: 
+|         <!-- services section start -->
+|     
+|     Path: http://analytical.htb:80/css/style.css
+|     Line number: 14
+|     Comment: 
+|         /*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 98
+|     Comment: 
+|         
+|         	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+|     
+|     Path: http://analytical.htb:80/js/popper.min.js
+|     Line number: 1
+|     Comment: 
+|         /*
+|          Copyright (C) Federico Zivolo 2017
+|          Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
+|          */
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 20
+|     Comment: 
+|         <!-- Responsive-->
+|     
+|     Path: http://analytical.htb:80/js/popper.min.js
+|     Line number: 6
+|     Comment: 
+|         
+|         //# sourceMappingURL=popper.min.js.map
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 222
+|     Comment: 
+|         
+|         	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 22
+|     Comment: 
+|         <!-- fevicon -->
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 98
+|     Comment: 
+|         <!-- about section start -->
+|     
+|     Path: http://analytical.htb:80/js/jquery.mCustomScrollbar.concat.min.js
+|     Line number: 3
+|     Comment: 
+|         /* == malihu jquery custom scrollbar plugin == Version: 3.1.5, License: MIT License (MIT) */
+|     
+|     Path: http://analytical.htb:80/css/style.css
+|     Line number: 4
+|     Comment: 
+|         /*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 150
+|     Comment: 
+|         <!-- services section end -->
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 150
+|     Comment: 
+|         
+|         	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 308
+|     Comment: 
+|         
+|         	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+|     
+|     Path: http://analytical.htb:80/css/owl.carousel.min.css
+|     Line number: 1
+|     Comment: 
+|         /**
+|          * Owl Carousel v2.3.3
+|          * Copyright 2013-2018 David Deutsch
+|          * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+|          */
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 341
+|     Comment: 
+|         <!-- Javascript files-->
+|     
+|     Path: http://analytical.htb:80/css/style.css
+|     Line number: 1
+|     Comment: 
+|         /*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 51
+|     Comment: 
+|         
+|         	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 16
+|     Comment: 
+|         
+|         	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+|     
+|     Path: http://analytical.htb:80/css/style.css
+|     Line number: 9
+|     Comment: 
+|         
+|         
+|          ----------------------------------------*****/
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 35
+|     Comment: 
+|         <!-- header section start -->
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 16
+|     Comment: 
+|         <!-- bootstrap css -->
+|     
+|     Path: http://analytical.htb:80/css/bootstrap.min.css
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          * Bootstrap v4.1.0 (https://getbootstrap.com/)
+|          * Copyright 2011-2018 The Bootstrap Authors
+|          * Copyright 2011-2018 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          */
+|     
+|     Path: http://analytical.htb:80/js/jquery.min.js
+|     Line number: 4
+|     Comment: 
+|         /*! jQuery v3.3.0 | (c) JS Foundation and other contributors | jquery.org/license */
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 334
+|     Comment: 
+|         <!-- copyright section start -->
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 234
+|     Comment: 
+|         <!-- team section end -->
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 58
+|     Comment: 
+|         
+|         	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+|     
+|     Path: http://analytical.htb:80/css/style.css
+|     Line number: 28
+|     Comment: 
+|         /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 4
+|     Comment: 
+|         <!-- basic -->
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 18
+|     Comment: 
+|         <!-- style css -->
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 340
+|     Comment: 
+|         <!-- copyright section end -->
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 350
+|     Comment: 
+|         <!-- javascript -->
+|     
+|     Path: http://analytical.htb:80/css/responsive.css
+|     Line number: 1
+|     Comment: 
+|         /*--------------------------------------------------------------------- File Name: responsive.css ---------------------------------------------------------------------*/
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 97
+|     Comment: 
+|         <!-- header section end -->
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 26
+|     Comment: 
+|         <!-- Tweaks for older IEs-->
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 23
+|     Comment: 
+|         
+|         	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 257
+|     Comment: 
+|         
+|         	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 24
+|     Comment: 
+|         <!-- Scrollbar Custom CSS -->
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 294
+|     Comment: 
+|         <!-- footer section start -->
+|     
+|     Path: http://analytical.htb:80/css/bootstrap.min.css
+|     Line number: 7
+|     Comment: 
+|         /*# sourceMappingURL=bootstrap.min.css.map */
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 8
+|     Comment: 
+|         <!-- mobile metas -->
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 28
+|     Comment: 
+|         <!-- owl stylesheets -->
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 293
+|     Comment: 
+|         <!-- contact section end -->
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 11
+|     Comment: 
+|         <!-- site metas -->
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 235
+|     Comment: 
+|         <!-- contact section start -->
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 151
+|     Comment: 
+|         <!-- team section start -->
+|     
+|     Path: http://analytical.htb:80/js/jquery.mCustomScrollbar.concat.min.js
+|     Line number: 1
+|     Comment: 
+|         /* == jquery mousewheel plugin == Version: 3.1.13, License: MIT License (MIT) */
+|     
+|     Path: http://analytical.htb:80/
+|     Line number: 347
+|     Comment: 
+|         <!-- sidebar -->
+|     
+|     Path: http://analytical.htb:80/css/responsive.css
+|     Line number: 86
+|     Comment: 
+|         /*------------------------------------------------------------------- 599px x 280px ---------------------------------------------------------------------*/
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 352
+|     Comment: 
+|         
+|         	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 1
+|     Comment: 
+|         
+|         
+|         ---------------------------------------------------------------------*/
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 9
+|     Comment: 
+|         
+|         	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 37
+|     Comment: 
+|         
+|         	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+|     
+|     Path: http://analytical.htb:80/js/jquery.min.js
+|     Line number: 1
+|     Comment: 
+|         /*---------------------------------------------------------------------
+|         	jQuery v3.3.1
+|         -----------------------------------------------------------------------*/
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 362
+|     Comment: 
+|         
+|              -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 201
+|     Comment: 
+|         
+|         	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+|     
+|     Path: http://analytical.htb:80/css/responsive.css
+|     Line number: 14
+|     Comment: 
+|         /*------------------------------------------------------------------- 767px x 599px ---------------------------------------------------------------------*/
+|     
+|     Path: http://analytical.htb:80/js/custom.js
+|     Line number: 364
+|     Comment: 
+|_        
+| http-grep: 
+|   (2) http://analytical.htb:80/: 
+|     (2) email: 
+|       + due@analytical.com
+|_      + demo@analytical.com
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-date: Thu, 02 Nov 2023 14:27:26 GMT; -14s from local time.
+| http-methods: 
+|_  Supported Methods: GET HEAD
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|     /css/
+|       css: 1
+|     /images/
+|       png: 9
+|     /js/
+|       js: 6
+|   Longest directory structure:
+|     Depth: 1
+|     Dir: /images/
+|   Total files found (by extension):
+|_    Other: 1; css: 1; js: 6; png: 9
+| http-headers: 
+|   Server: nginx/1.18.0 (Ubuntu)
+|   Date: Thu, 02 Nov 2023 14:27:29 GMT
+|   Content-Type: text/html
+|   Content-Length: 17169
+|   Last-Modified: Fri, 25 Aug 2023 15:24:42 GMT
+|   Connection: close
+|   ETag: "64e8c7ba-4311"
+|   Accept-Ranges: bytes
+|   
+|_  (Request type: HEAD)
+|_http-fetch: Please enter the complete path of the directory to save data in.
+|_http-malware-host: Host appears to be clean
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-mobileversion-checker: No mobile version detected.
+| http-fileupload-exploiter: 
+|   
+|     Couldn't find a file-type field.
+|   
+|     Couldn't find a file-type field.
+|   
+|_    Couldn't find a file-type field.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-vuln-cve2011-3192: 
+|   VULNERABLE:
+|   Apache byterange filter DoS
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2011-3192  BID:49303
+|       The Apache web server is vulnerable to a denial of service attack when numerous
+|       overlapping byte ranges are requested.
+|     Disclosure date: 2011-08-19
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192
+|       https://www.tenable.com/plugins/nessus/55976
+|       https://seclists.org/fulldisclosure/2011/Aug/175
+|_      https://www.securityfocus.com/bid/49303
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov  3 01:02:40 2023 -- 1 IP address (1 host up) scanned in 306.80 seconds

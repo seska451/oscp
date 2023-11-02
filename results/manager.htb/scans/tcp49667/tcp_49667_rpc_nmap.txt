@@ -1,0 +1,13 @@
+# Nmap 7.94 scan initiated Wed Nov  1 08:24:16 2023 as: nmap -vv --reason -Pn -T4 -sV -p 49667 --script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/kali/src/oscp/results/manager.htb/scans/tcp49667/tcp_49667_rpc_nmap.txt -oX /home/kali/src/oscp/results/manager.htb/scans/tcp49667/xml/tcp_49667_rpc_nmap.xml manager.htb
+Nmap scan report for manager.htb (10.10.11.236)
+Host is up, received user-set (0.25s latency).
+rDNS record for 10.10.11.236: manager
+Scanned at 2023-11-01 08:24:17 ACDT for 65s
+
+PORT      STATE SERVICE REASON          VERSION
+49667/tcp open  msrpc   syn-ack ttl 127 Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  1 08:25:22 2023 -- 1 IP address (1 host up) scanned in 65.66 seconds

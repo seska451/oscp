@@ -6,7 +6,7 @@ Scanned at 2023-10-29 08:07:16 EDT for 88s
 Bug in ms-sql-dac: no string output.
 Bug in ms-sql-hasdbaccess: no string output.
 PORT     STATE SERVICE  REASON  VERSION
-1433/tcp open  ms-sql-s syn-ack Microsoft SQL Server 2019 15.00.2000.00; RTM
+1433/tcp open  ms-sql- Microsoft SQL Server 2019 15.00.200s syn-ack0.00; RTM
 | ssl-enum-ciphers: 
 |   TLSv1.0: 
 |     ciphers: 

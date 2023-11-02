@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Thu Nov  2 04:35:30 2023 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/src/oscp/results/craft/scans/_full_tcp_nmap.txt -oX /home/kali/src/oscp/results/craft/scans/xml/_full_tcp_nmap.xml craft -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/src/oscp/results/craft/scans/_full_tcp_nmap.txt -oX /home/kali/src/oscp/results/craft/scans/xml/_full_tcp_nmap.xml craft" start="1698861930" startstr="Thu Nov  2 04:35:30 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1698861930"/>
+<taskend task="NSE" time="1698861930"/>
+<taskbegin task="NSE" time="1698861930"/>
+<taskend task="NSE" time="1698861930"/>
+<taskbegin task="NSE" time="1698861930"/>
+<taskend task="NSE" time="1698861930"/>
+<taskbegin task="SYN Stealth Scan" time="1698861930"/>
+<taskprogress task="SYN Stealth Scan" time="1698861961" percent="5.18" remaining="568" etc="1698862529"/>
+<taskprogress task="SYN Stealth Scan" time="1698861991" percent="12.37" remaining="433" etc="1698862423"/>
+<taskprogress task="SYN Stealth Scan" time="1698862033" percent="20.60" remaining="398" etc="1698862430"/>
+<taskprogress task="SYN Stealth Scan" time="1698862063" percent="30.69" remaining="301" etc="1698862363"/>
+<taskprogress task="SYN Stealth Scan" time="1698862093" percent="39.19" remaining="253" etc="1698862346"/>
+<taskprogress task="SYN Stealth Scan" time="1698862123" percent="49.10" remaining="201" etc="1698862323"/>
+<taskprogress task="SYN Stealth Scan" time="1698862153" percent="63.19" remaining="130" etc="1698862283"/>
+<taskprogress task="SYN Stealth Scan" time="1698862183" percent="80.44" remaining="62" etc="1698862245"/>
+<taskend task="SYN Stealth Scan" time="1698862231" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1698862231"/>
+<taskend task="Service scan" time="1698862231" extrainfo="1 service on 1 host"/>
+<taskbegin task="Traceroute" time="1698862237"/>
+<taskend task="Traceroute" time="1698862237"/>
+<taskbegin task="Parallel DNS resolution of 3 hosts." time="1698862237"/>
+<taskend task="Parallel DNS resolution of 3 hosts." time="1698862239"/>
+<taskbegin task="NSE" time="1698862239"/>
+<taskend task="NSE" time="1698862244"/>
+<taskbegin task="NSE" time="1698862244"/>
+<taskend task="NSE" time="1698862245"/>
+<taskbegin task="NSE" time="1698862245"/>
+<taskend task="NSE" time="1698862245"/>
+<host starttime="1698861930" endtime="1698862245"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.198.169" addrtype="ipv4"/>
+<hostnames>
+<hostname name="craft" type="user"/>
+<hostname name="craft" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-response" count="65534" proto="tcp" ports="1-79,81-65535"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="125"/><service name="http" product="Apache httpd" version="2.4.48" extrainfo="(Win64) OpenSSL/1.1.1k PHP/8.0.7" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.48</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-title" output="Craft"><elem key="title">Craft</elem>
+</script><script id="http-server-header" output="Apache/2.4.48 (Win64) OpenSSL/1.1.1k PHP/8.0.7"><elem>Apache/2.4.48 (Win64) OpenSSL/1.1.1k PHP/8.0.7</elem>
+</script><script id="http-favicon" output="Unknown favicon MD5: 556F31ACD686989B1AFCF382C05846AA"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osfingerprint fingerprint="SCAN(V=7.94%E=4%D=11/2%OT=80%CT=%CU=%PV=Y%DS=4%DC=T%G=N%TM=654294A5%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=105%GCD=1%ISR=10C%TS=U)&#xa;OPS(O1=M551NW8NNS%O2=M551NW8NNS%O3=M551NW8%O4=M551NW8NNS%O5=M551NW8NNS%O6=M551NNS)&#xa;WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FF70)&#xa;ECN(R=Y%DF=Y%TG=80%W=FFFF%O=M551NW8NNS%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=N)&#xa;"/>
+</os>
+<distance value="4"/>
+<tcpsequence index="261" difficulty="Good luck!" values="96DA1354,34C47586,7148148A,F382E5F5,DCC74EF,49D94C6E"/>
+<ipidsequence class="Busy server or unknown class" values="471D,4753,4784,47AC,47EA,47ED"/>
+<tcptssequence class="none returned (unsupported)"/>
+<trace port="80" proto="tcp">
+<hop ttl="1" ipaddr="192.168.45.1" rtt="241.20"/>
+<hop ttl="2" ipaddr="192.168.45.254" rtt="241.16"/>
+<hop ttl="3" ipaddr="192.168.251.1" rtt="241.21"/>
+<hop ttl="4" ipaddr="192.168.198.169" rtt="241.74" host="craft"/>
+</trace>
+<times srtt="242358" rttvar="2067" to="250626"/>
+</host>
+<taskbegin task="NSE" time="1698862245"/>
+<taskend task="NSE" time="1698862245"/>
+<taskbegin task="NSE" time="1698862245"/>
+<taskend task="NSE" time="1698862245"/>
+<taskbegin task="NSE" time="1698862245"/>
+<taskend task="NSE" time="1698862245"/>
+<runstats><finished time="1698862245" timestr="Thu Nov  2 04:40:45 2023" summary="Nmap done at Thu Nov  2 04:40:45 2023; 1 IP address (1 host up) scanned in 315.06 seconds" elapsed="315.06" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

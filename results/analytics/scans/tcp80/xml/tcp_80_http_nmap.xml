@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Fri Nov  3 00:54:01 2023 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/src/oscp/results/analytics/scans/tcp80/tcp_80_http_nmap.txt -oX /home/kali/src/oscp/results/analytics/scans/tcp80/xml/tcp_80_http_nmap.xml analytics -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/src/oscp/results/analytics/scans/tcp80/tcp_80_http_nmap.txt -oX /home/kali/src/oscp/results/analytics/scans/tcp80/xml/tcp_80_http_nmap.xml analytics" start="1698935041" startstr="Fri Nov  3 00:54:01 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="80"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1698935041"/>
+<taskend task="NSE" time="1698935041"/>
+<taskbegin task="NSE" time="1698935041"/>
+<taskend task="NSE" time="1698935041"/>
+<taskbegin task="NSE" time="1698935041"/>
+<taskend task="NSE" time="1698935041"/>
+<taskbegin task="Connect Scan" time="1698935041"/>
+<taskend task="Connect Scan" time="1698935041" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1698935041"/>
+<taskend task="Service scan" time="1698935042" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1698935042"/>
+<taskprogress task="NSE" time="1698935081" percent="99.02" remaining="1" etc="1698935081"/>
+<taskprogress task="NSE" time="1698935111" percent="99.68" remaining="1" etc="1698935111"/>
+<taskprogress task="NSE" time="1698935141" percent="99.68" remaining="1" etc="1698935141"/>
+<taskprogress task="NSE" time="1698935171" percent="99.68" remaining="1" etc="1698935171"/>
+<taskprogress task="NSE" time="1698935201" percent="99.68" remaining="1" etc="1698935202"/>

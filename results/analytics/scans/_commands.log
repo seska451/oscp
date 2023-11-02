@@ -1,0 +1,22 @@
+nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN "/home/kali/src/oscp/results/analytics/scans/_quick_tcp_nmap.txt" -oX "/home/kali/src/oscp/results/analytics/scans/xml/_quick_tcp_nmap.xml" analytics
+
+nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN "/home/kali/src/oscp/results/analytics/scans/_full_tcp_nmap.txt" -oX "/home/kali/src/oscp/results/analytics/scans/xml/_full_tcp_nmap.xml" analytics
+
+nmap -vv --reason -Pn -T4 -sV -p 22 --script="banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods" -oN "/home/kali/src/oscp/results/analytics/scans/tcp22/tcp_22_ssh_nmap.txt" -oX "/home/kali/src/oscp/results/analytics/scans/tcp22/xml/tcp_22_ssh_nmap.xml" analytics
+
+feroxbuster -u http://analytics:80/ -t 10 -w /home/kali/.local/share/AutoRecon/wordlists/dirbuster.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -q -e -r -o "/home/kali/src/oscp/results/analytics/scans/tcp80/tcp_80_http_feroxbuster_dirbuster.txt"
+
+curl -sSikf http://analytics:80/.well-known/security.txt
+
+curl -sSikf http://analytics:80/robots.txt
+
+curl -sSik http://analytics:80/
+
+nikto -ask=no -Tuning=x4567890ac -nointeractive -host http://analytics:80 2>&1 | tee "/home/kali/src/oscp/results/analytics/scans/tcp80/tcp_80_http_nikto.txt"
+
+nmap -vv --reason -Pn -T4 -sV -p 80 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/src/oscp/results/analytics/scans/tcp80/tcp_80_http_nmap.txt" -oX "/home/kali/src/oscp/results/analytics/scans/tcp80/xml/tcp_80_http_nmap.xml" analytics
+
+whatweb --color=never --no-errors -a 3 -v http://analytics:80 2>&1
+
+wkhtmltoimage --format png http://analytics:80/ /home/kali/src/oscp/results/analytics/scans/tcp80/tcp_80_http_screenshot.png
+

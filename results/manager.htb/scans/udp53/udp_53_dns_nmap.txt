@@ -1,0 +1,23 @@
+# Nmap 7.94 scan initiated Wed Nov  1 08:50:25 2023 as: nmap -vv --reason -Pn -T4 -sU -sV -p 53 "--script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/src/oscp/results/manager.htb/scans/udp53/udp_53_dns_nmap.txt -oX /home/kali/src/oscp/results/manager.htb/scans/udp53/xml/udp_53_dns_nmap.xml manager.htb
+Nmap scan report for manager.htb (10.10.11.236)
+Host is up, received user-set (0.070s latency).
+rDNS record for 10.10.11.236: manager
+Scanned at 2023-11-01 08:50:25 ACDT for 110s
+
+PORT   STATE SERVICE REASON               VERSION
+53/udp open  domain  udp-response ttl 127 Simple DNS Plus
+| dns-nsec-enum: 
+|_  No NSEC records found
+| dns-nsec3-enum: 
+|_  DNSSEC NSEC3 not supported
+|_dns-cache-snoop: 0 of 100 tested domains are cached.
+|_dns-recursion: Recursion appears to be enabled
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| dns-brute: 
+|_  DNS Brute-force hostnames: No results.
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  1 08:52:15 2023 -- 1 IP address (1 host up) scanned in 110.75 seconds

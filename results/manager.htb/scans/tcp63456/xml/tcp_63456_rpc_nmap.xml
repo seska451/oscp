@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Wed Nov  1 08:24:16 2023 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 63456 -&#45;script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/kali/src/oscp/results/manager.htb/scans/tcp63456/tcp_63456_rpc_nmap.txt -oX /home/kali/src/oscp/results/manager.htb/scans/tcp63456/xml/tcp_63456_rpc_nmap.xml manager.htb -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 63456 -&#45;script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/kali/src/oscp/results/manager.htb/scans/tcp63456/tcp_63456_rpc_nmap.txt -oX /home/kali/src/oscp/results/manager.htb/scans/tcp63456/xml/tcp_63456_rpc_nmap.xml manager.htb" start="1698789256" startstr="Wed Nov  1 08:24:16 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="63456"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1698789258"/>
+<taskend task="NSE" time="1698789258"/>
+<taskbegin task="NSE" time="1698789258"/>
+<taskend task="NSE" time="1698789258"/>
+<taskbegin task="SYN Stealth Scan" time="1698789258"/>
+<taskend task="SYN Stealth Scan" time="1698789258" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1698789258"/>
+<taskend task="Service scan" time="1698789285" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1698789285"/>
+<taskend task="NSE" time="1698789295"/>
+<taskbegin task="NSE" time="1698789295"/>
+<taskend task="NSE" time="1698789298"/>
+<host starttime="1698789258" endtime="1698789298"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.11.236" addrtype="ipv4"/>
+<hostnames>
+<hostname name="manager.htb" type="user"/>
+<hostname name="manager" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="63456"><state state="open" reason="syn-ack" reason_ttl="127"/></port>
+</ports>
+<times srtt="245061" rttvar="245061" to="1225305"/>
+</host>
+<taskbegin task="NSE" time="1698789298"/>
+<taskend task="NSE" time="1698789298"/>
+<taskbegin task="NSE" time="1698789298"/>
+<taskend task="NSE" time="1698789298"/>
+<runstats><finished time="1698789298" timestr="Wed Nov  1 08:24:58 2023" summary="Nmap done at Wed Nov  1 08:24:58 2023; 1 IP address (1 host up) scanned in 42.10 seconds" elapsed="42.10" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

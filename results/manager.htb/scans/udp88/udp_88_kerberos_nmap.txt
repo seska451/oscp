@@ -1,0 +1,13 @@
+# Nmap 7.94 scan initiated Wed Nov  1 08:50:25 2023 as: nmap -vv --reason -Pn -T4 -sU -sV -p 88 --script=banner,krb5-enum-users -oN /home/kali/src/oscp/results/manager.htb/scans/udp88/udp_88_kerberos_nmap.txt -oX /home/kali/src/oscp/results/manager.htb/scans/udp88/xml/udp_88_kerberos_nmap.xml manager.htb
+Nmap scan report for manager.htb (10.10.11.236)
+Host is up, received user-set (0.060s latency).
+rDNS record for 10.10.11.236: manager
+Scanned at 2023-11-01 08:50:25 ACDT for 0s
+
+PORT   STATE SERVICE      REASON               VERSION
+88/udp open  kerberos-sec udp-response ttl 127 Microsoft Windows Kerberos (server time: 2023-10-31 22:24:23Z)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  1 08:50:25 2023 -- 1 IP address (1 host up) scanned in 0.38 seconds

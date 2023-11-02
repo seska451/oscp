@@ -1,0 +1,14 @@
+# Nmap 7.94 scan initiated Wed Nov  1 08:50:25 2023 as: nmap -vv --reason -Pn -T4 -sU -sV -p 123 "--script=banner,(ntp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/src/oscp/results/manager.htb/scans/udp123/udp_123_ntp_nmap.txt -oX /home/kali/src/oscp/results/manager.htb/scans/udp123/xml/udp_123_ntp_nmap.xml manager.htb
+Nmap scan report for manager.htb (10.10.11.236)
+Host is up, received user-set (0.042s latency).
+rDNS record for 10.10.11.236: manager
+Scanned at 2023-11-01 08:50:25 ACDT for 10s
+
+PORT    STATE SERVICE REASON               VERSION
+123/udp open  ntp     udp-response ttl 127 NTP v3
+| ntp-info: 
+|_  receive time stamp: 2023-10-31T22:24:25
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  1 08:50:35 2023 -- 1 IP address (1 host up) scanned in 10.60 seconds

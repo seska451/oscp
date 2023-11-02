@@ -1,0 +1,4 @@
+administrator
+guest
+manager.htb\administrator
+manager.htb\guest

@@ -1,0 +1,15 @@
+HTTP/1.1 302 Moved Temporarily
+Server: nginx/1.18.0 (Ubuntu)
+Date: Thu, 02 Nov 2023 14:23:48 GMT
+Content-Type: text/html
+Content-Length: 154
+Connection: keep-alive
+Location: http://analytical.htb/
+
+<html>
+<head><title>302 Found</title></head>
+<body>
+<center><h1>302 Found</h1></center>
+<hr><center>nginx/1.18.0 (Ubuntu)</center>
+</body>
+</html>

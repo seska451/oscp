@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Fri Nov  3 01:10:40 2023 as: nmap -sC -sV -Pn -p- -oA ./results/analytical.htb/scans/tcp80 -vvvv analytical.htb nmapscan -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -Pn -p- -oA ./results/analytical.htb/scans/tcp80 -vvvv analytical.htb nmapscan" start="1698936040" startstr="Fri Nov  3 01:10:40 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="4"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1698936040"/>
+<taskend task="NSE" time="1698936040"/>
+<taskbegin task="NSE" time="1698936040"/>
+<taskend task="NSE" time="1698936040"/>
+<taskbegin task="NSE" time="1698936040"/>
+<taskend task="NSE" time="1698936040"/>
+<taskbegin task="Connect Scan" time="1698936066"/>
+<taskprogress task="Connect Scan" time="1698936097" percent="2.21" remaining="1370" etc="1698937467"/>
+<taskprogress task="Connect Scan" time="1698936127" percent="5.01" remaining="1156" etc="1698937283"/>
+<taskprogress task="Connect Scan" time="1698936157" percent="8.01" remaining="1046" etc="1698937202"/>
+<taskprogress task="Connect Scan" time="1698936185" percent="10.86" remaining="977" etc="1698937162"/>
+<taskprogress task="Connect Scan" time="1698936215" percent="14.13" remaining="906" etc="1698937121"/>
+<taskprogress task="Connect Scan" time="1698936245" percent="17.51" remaining="844" etc="1698937088"/>
+<taskprogress task="Connect Scan" time="1698936353" percent="26.60" remaining="792" etc="1698937145"/>
+<taskprogress task="Connect Scan" time="1698936386" percent="30.33" remaining="736" etc="1698937121"/>
+<taskprogress task="Connect Scan" time="1698936434" percent="35.06" remaining="682" etc="1698937116"/>
+<taskprogress task="Connect Scan" time="1698936476" percent="39.59" remaining="626" etc="1698937102"/>
+<taskprogress task="Connect Scan" time="1698936527" percent="44.76" remaining="569" etc="1698937096"/>
+<taskprogress task="Connect Scan" time="1698936575" percent="49.64" remaining="517" etc="1698937091"/>
+<taskprogress task="Connect Scan" time="1698936620" percent="54.46" remaining="464" etc="1698937083"/>
+<taskprogress task="Connect Scan" time="1698936677" percent="59.78" remaining="412" etc="1698937088"/>
+<taskprogress task="Connect Scan" time="1698936731" percent="64.90" remaining="360" etc="1698937091"/>
+<taskprogress task="Connect Scan" time="1698936782" percent="70.03" remaining="307" etc="1698937088"/>
+<taskprogress task="Connect Scan" time="1698936836" percent="75.14" remaining="255" etc="1698937091"/>
+<taskprogress task="Connect Scan" time="1698936887" percent="80.24" remaining="203" etc="1698937089"/>
+<taskprogress task="Connect Scan" time="1698936944" percent="85.48" remaining="150" etc="1698937093"/>
+<taskprogress task="Connect Scan" time="1698936992" percent="90.54" remaining="97" etc="1698937089"/>
+<taskprogress task="Connect Scan" time="1698937049" percent="95.59" remaining="46" etc="1698937094"/>
+<taskend task="Connect Scan" time="1698937104" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1698937104"/>
+<taskend task="Service scan" time="1698937105" extrainfo="2 services on 1 host"/>
+<taskbegin task="NSE" time="1698937105"/>
+<taskend task="NSE" time="1698937109"/>
+<taskbegin task="NSE" time="1698937109"/>
+<taskend task="NSE" time="1698937110"/>
+<taskbegin task="NSE" time="1698937110"/>
+<taskend task="NSE" time="1698937110"/>
+<host starttime="1698936066" endtime="1698937110"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.129.47.200" addrtype="ipv4"/>
+<hostnames>
+<hostname name="analytical.htb" type="user"/>
+<hostname name="analytical.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65533">
+<extrareasons reason="conn-refused" count="65533" proto="tcp" ports="1-21,23-79,81-65535"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="8.9p1 Ubuntu 3ubuntu0.4" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  256 3e:ea:45:4b:c5:d1:6d:6f:e2:d4:d1:3b:0a:3d:a9:4f (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJ+m7rYl1vRtnm789pH3IRhxI4CNCANVj+N5kovboNzcw9vHsBwvPX3KYA3cxGbKiA0VqbKRpOHnpsMuHEXEVJc=&#xa;  256 64:cc:75:de:4a:e6:a5:b4:73:eb:3f:1b:cf:b4:e3:94 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOtuEdoYxTohG80Bo6YCqSzUY9+qbnAFnhsk4yAZNqhM"><table>
+<elem key="bits">256</elem>
+<elem key="fingerprint">3eea454bc5d16d6fe2d4d13b0a3da94f</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJ+m7rYl1vRtnm789pH3IRhxI4CNCANVj+N5kovboNzcw9vHsBwvPX3KYA3cxGbKiA0VqbKRpOHnpsMuHEXEVJc=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="fingerprint">64cc75de4ae6a5b473eb3f1bcfb4e394</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIOtuEdoYxTohG80Bo6YCqSzUY9+qbnAFnhsk4yAZNqhM</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" version="1.18.0" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.18.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-title" output="Analytical"><elem key="title">Analytical</elem>
+</script><script id="http-server-header" output="nginx/1.18.0 (Ubuntu)"><elem>nginx/1.18.0 (Ubuntu)</elem>
+</script></port>
+</ports>
+<times srtt="115425" rttvar="2136" to="123969"/>
+</host>
+<taskbegin task="NSE" time="1698937120"/>
+<taskend task="NSE" time="1698937120"/>
+<taskbegin task="NSE" time="1698937120"/>
+<taskend task="NSE" time="1698937120"/>
+<taskbegin task="NSE" time="1698937120"/>
+<taskend task="NSE" time="1698937120"/>
+<runstats><finished time="1698937120" timestr="Fri Nov  3 01:28:40 2023" summary="Nmap done at Fri Nov  3 01:28:40 2023; 1 IP address (1 host up) scanned in 1079.73 seconds" elapsed="1079.73" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
