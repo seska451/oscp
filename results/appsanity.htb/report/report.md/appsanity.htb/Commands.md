@@ -1,3 +1,4 @@
+```bash
 nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN "/home/kali/src/oscp/results/appsanity.htb/scans/_quick_tcp_nmap.txt" -oX "/home/kali/src/oscp/results/appsanity.htb/scans/xml/_quick_tcp_nmap.xml" appsanity.htb
 
 nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN "/home/kali/src/oscp/results/appsanity.htb/scans/_full_tcp_nmap.txt" -oX "/home/kali/src/oscp/results/appsanity.htb/scans/xml/_full_tcp_nmap.xml" appsanity.htb
@@ -34,3 +35,5 @@ whatweb --color=never --no-errors -a 3 -v https://appsanity.htb:443 2>&1
 
 wkhtmltoimage --format png https://appsanity.htb:443/ /home/kali/src/oscp/results/appsanity.htb/scans/tcp443/tcp_443_https_screenshot.png
 
+
+```

@@ -1,0 +1,59 @@
+```bash
+[*] http on tcp/80
+
+	[-] (feroxbuster) Multi-threaded recursive directory/file enumeration for web servers using various wordlists:
+
+		feroxbuster -u http://appsanity.htb:80 -t 10 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -e -r -o /home/kali/src/oscp/results/appsanity.htb/scans/tcp80/tcp_80_http_feroxbuster_dirbuster.txt
+
+	[-] Credential bruteforcing commands (don't run these without modifying them):
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 80 -o "/home/kali/src/oscp/results/appsanity.htb/scans/tcp80/tcp_80_http_auth_hydra.txt" http-get://appsanity.htb/path/to/auth/area
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 80 -O "/home/kali/src/oscp/results/appsanity.htb/scans/tcp80/tcp_80_http_auth_medusa.txt" -M http -h appsanity.htb -m DIR:/path/to/auth/area
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 80 -o "/home/kali/src/oscp/results/appsanity.htb/scans/tcp80/tcp_80_http_form_hydra.txt" http-post-form://appsanity.htb/path/to/login.php:"username=^USER^&password=^PASS^":"invalid-login-message"
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 80 -O "/home/kali/src/oscp/results/appsanity.htb/scans/tcp80/tcp_80_http_form_medusa.txt" -M web-form -h appsanity.htb -m FORM:/path/to/login.php -m FORM-DATA:"post?username=&password=" -m DENY-SIGNAL:"invalid login message"
+
+	[-] (wpscan) WordPress Security Scanner (useful if WordPress is found):
+
+		wpscan --url http://appsanity.htb:80/ --no-update -e vp,vt,tt,cb,dbe,u,m --plugins-detection aggressive --plugins-version-detection aggressive -f cli-no-color 2>&1 | tee "/home/kali/src/oscp/results/appsanity.htb/scans/tcp80/tcp_80_http_wpscan.txt"
+
+[*] https on tcp/443
+
+	[-] (feroxbuster) Multi-threaded recursive directory/file enumeration for web servers using various wordlists:
+
+		feroxbuster -u https://appsanity.htb:443 -t 10 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -e -r -o /home/kali/src/oscp/results/appsanity.htb/scans/tcp443/tcp_443_https_feroxbuster_dirbuster.txt
+
+	[-] Credential bruteforcing commands (don't run these without modifying them):
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 443 -o "/home/kali/src/oscp/results/appsanity.htb/scans/tcp443/tcp_443_https_auth_hydra.txt" https-get://appsanity.htb/path/to/auth/area
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 443 -O "/home/kali/src/oscp/results/appsanity.htb/scans/tcp443/tcp_443_https_auth_medusa.txt" -M http -h appsanity.htb -m DIR:/path/to/auth/area
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 443 -o "/home/kali/src/oscp/results/appsanity.htb/scans/tcp443/tcp_443_https_form_hydra.txt" https-post-form://appsanity.htb/path/to/login.php:"username=^USER^&password=^PASS^":"invalid-login-message"
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 443 -O "/home/kali/src/oscp/results/appsanity.htb/scans/tcp443/tcp_443_https_form_medusa.txt" -M web-form -h appsanity.htb -m FORM:/path/to/login.php -m FORM-DATA:"post?username=&password=" -m DENY-SIGNAL:"invalid login message"
+
+	[-] (wpscan) WordPress Security Scanner (useful if WordPress is found):
+
+		wpscan --url https://appsanity.htb:443/ --no-update -e vp,vt,tt,cb,dbe,u,m --plugins-detection aggressive --plugins-version-detection aggressive -f cli-no-color 2>&1 | tee "/home/kali/src/oscp/results/appsanity.htb/scans/tcp443/tcp_443_https_wpscan.txt"
+
+[*] wsman on tcp/5985
+
+	[-] Bruteforce logins:
+
+		crackmapexec winrm appsanity.htb -d '<domain>' -u '/usr/share/seclists/Usernames/top-usernames-shortlist.txt' -p '/usr/share/seclists/Passwords/darkweb2017-top100.txt'
+
+	[-] Check login (requires credentials):
+
+		crackmapexec winrm appsanity.htb -d '<domain>' -u '<username>' -p '<password>'
+
+	[-] Evil WinRM (gem install evil-winrm):
+
+		evil-winrm -u '<user>' -p '<password>' -i appsanity.htb
+
+		evil-winrm -u '<user>' -H '<hash>' -i appsanity.htb
+
+
+```

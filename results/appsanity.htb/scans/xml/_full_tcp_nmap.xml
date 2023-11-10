@@ -14,3 +14,48 @@
 <taskend task="NSE" time="1698943800"/>
 <taskbegin task="Connect Scan" time="1698943800"/>
 <taskprogress task="Connect Scan" time="1698943831" percent="15.68" remaining="167" etc="1698943998"/>
+<taskprogress task="Connect Scan" time="1698943861" percent="45.34" remaining="74" etc="1698943935"/>
+<taskprogress task="Connect Scan" time="1698943891" percent="68.70" remaining="42" etc="1698943932"/>
+<taskend task="Connect Scan" time="1698943941" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1698943941"/>
+<taskend task="Service scan" time="1698944020" extrainfo="3 services on 1 host"/>
+<taskbegin task="NSE" time="1698944020"/>
+<taskend task="NSE" time="1698944025"/>
+<taskbegin task="NSE" time="1698944025"/>
+<taskend task="NSE" time="1698944026"/>
+<taskbegin task="NSE" time="1698944026"/>
+<taskend task="NSE" time="1698944026"/>
+<host starttime="1698943800" endtime="1698944026"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.129.47.209" addrtype="ipv4"/>
+<hostnames>
+<hostname name="appsanity.htb" type="user"/>
+<hostname name="appsanity.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65532">
+<extrareasons reason="no-response" count="65532" proto="tcp" ports="1-79,81-442,444-5984,5986-65535"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_services:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-title" output="Did not follow redirect to https://meddigi.htb/"><elem key="redirect_url">https://meddigi.htb/</elem>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+</ports>
+<times srtt="103578" rttvar="7125" to="132078"/>
+</host>
+<taskbegin task="NSE" time="1698944026"/>
+<taskend task="NSE" time="1698944026"/>
+<taskbegin task="NSE" time="1698944026"/>
+<taskend task="NSE" time="1698944026"/>
+<taskbegin task="NSE" time="1698944026"/>
+<taskend task="NSE" time="1698944026"/>
+<runstats><finished time="1698944026" timestr="Fri Nov  3 03:23:46 2023" summary="Nmap done at Fri Nov  3 03:23:46 2023; 1 IP address (1 host up) scanned in 226.24 seconds" elapsed="226.24" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

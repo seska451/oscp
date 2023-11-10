@@ -1,0 +1,38 @@
+WhatWeb report for http://codify.htb:3000
+Status    : 200 OK
+Title     : Codify
+IP        : 10.129.41.132
+Country   : RESERVED, ZZ
+
+Summary   : Bootstrap[4.3.1], HTML5, X-Powered-By[Express]
+
+Detected Plugins:
+[ Bootstrap ]
+	Bootstrap is an open source toolkit for developing with
+	HTML, CSS, and JS.
+
+	Version      : 4.3.1
+	Website     : https://getbootstrap.com/
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header
+
+	String       : Express (from x-powered-by string)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	X-Powered-By: Express
+	Accept-Ranges: bytes
+	Cache-Control: public, max-age=0
+	Last-Modified: Tue, 11 Apr 2023 11:29:55 GMT
+	ETag: W/"8dd-18770145b38"
+	Content-Type: text/html; charset=UTF-8
+	Content-Length: 2269
+	Date: Fri, 10 Nov 2023 11:42:29 GMT
+	Connection: close
+
+

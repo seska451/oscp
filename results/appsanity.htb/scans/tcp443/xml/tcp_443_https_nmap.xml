@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Fri Nov  3 03:21:38 2023 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 443 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/src/oscp/results/appsanity.htb/scans/tcp443/tcp_443_https_nmap.txt -oX /home/kali/src/oscp/results/appsanity.htb/scans/tcp443/xml/tcp_443_https_nmap.xml appsanity.htb -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 443 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/src/oscp/results/appsanity.htb/scans/tcp443/tcp_443_https_nmap.txt -oX /home/kali/src/oscp/results/appsanity.htb/scans/tcp443/xml/tcp_443_https_nmap.xml appsanity.htb" start="1698943898" startstr="Fri Nov  3 03:21:38 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="443"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1698943898"/>
+<taskend task="NSE" time="1698943898"/>
+<taskbegin task="NSE" time="1698943898"/>
+<taskend task="NSE" time="1698943898"/>
+<taskbegin task="NSE" time="1698943898"/>
+<taskend task="NSE" time="1698943898"/>
+<taskbegin task="Connect Scan" time="1698943898"/>
+<taskend task="Connect Scan" time="1698943898" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1698943898"/>
+<taskend task="Service scan" time="1698943910" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1698943910"/>
+<taskprogress task="NSE" time="1698943941" percent="84.49" remaining="6" etc="1698943947"/>
+<taskprogress task="NSE" time="1698943971" percent="99.35" remaining="1" etc="1698943971"/>
+<taskend task="NSE" time="1698943974"/>
+<taskbegin task="NSE" time="1698943974"/>
+<taskend task="NSE" time="1698943977"/>
+<taskbegin task="NSE" time="1698943977"/>
+<taskend task="NSE" time="1698943978"/>
+<host starttime="1698943898" endtime="1698943978"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.129.47.209" addrtype="ipv4"/>
+<hostnames>
+<hostname name="appsanity.htb" type="user"/>
+<hostname name="appsanity.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-security-headers" output="&#xa;  Strict_Transport_Security: &#xa;    HSTS not configured in HTTPS Server"><table key="Strict_Transport_Security">
+<elem>HSTS not configured in HTTPS Server</elem>
+</table>
+</script><script id="http-vuln-cve2014-3704" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-errors" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-vhosts" output="&#xa;128 names had status ERROR"/><script id="http-config-backup" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-chrono" output="Request times for /; avg: 464.87ms; min: 415.92ms; max: 523.75ms"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/><script id="http-aspnet-debug" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-useragent-tester" output="&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="ssl-ccs-injection" output="No reply from server (TIMEOUT)"/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    &#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/></port>
+</ports>
+<times srtt="104116" rttvar="104116" to="520580"/>
+</host>
+<taskbegin task="NSE" time="1698943978"/>
+<taskend task="NSE" time="1698943978"/>
+<taskbegin task="NSE" time="1698943978"/>
+<taskend task="NSE" time="1698943978"/>
+<taskbegin task="NSE" time="1698943978"/>
+<taskend task="NSE" time="1698943978"/>
+<runstats><finished time="1698943978" timestr="Fri Nov  3 03:22:58 2023" summary="Nmap done at Fri Nov  3 03:22:58 2023; 1 IP address (1 host up) scanned in 80.32 seconds" elapsed="80.32" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

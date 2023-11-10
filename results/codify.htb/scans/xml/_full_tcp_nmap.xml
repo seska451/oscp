@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Fri Nov 10 22:12:14 2023 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/src/oscp/results/codify.htb/scans/_full_tcp_nmap.txt -oX /home/kali/src/oscp/results/codify.htb/scans/xml/_full_tcp_nmap.xml codify.htb -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/src/oscp/results/codify.htb/scans/_full_tcp_nmap.txt -oX /home/kali/src/oscp/results/codify.htb/scans/xml/_full_tcp_nmap.xml codify.htb" start="1699616534" startstr="Fri Nov 10 22:12:14 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1699616535"/>
+<taskend task="NSE" time="1699616535"/>
+<taskbegin task="NSE" time="1699616535"/>
+<taskend task="NSE" time="1699616535"/>
+<taskbegin task="NSE" time="1699616535"/>
+<taskend task="NSE" time="1699616535"/>
+<taskbegin task="Connect Scan" time="1699616535"/>
+<taskprogress task="Connect Scan" time="1699616566" percent="5.05" remaining="583" etc="1699617149"/>
+<taskprogress task="Connect Scan" time="1699616635" percent="15.40" remaining="550" etc="1699617184"/>
+<taskprogress task="Connect Scan" time="1699616710" percent="25.46" remaining="513" etc="1699617222"/>
+<taskprogress task="Connect Scan" time="1699616749" percent="31.11" remaining="474" etc="1699617223"/>
+<taskprogress task="Connect Scan" time="1699616779" percent="36.04" remaining="433" etc="1699617212"/>
+<taskprogress task="Connect Scan" time="1699616821" percent="41.77" remaining="399" etc="1699617220"/>
+<taskprogress task="Connect Scan" time="1699616863" percent="47.44" remaining="364" etc="1699617226"/>
+<taskprogress task="Connect Scan" time="1699616899" percent="52.66" remaining="328" etc="1699617226"/>
+<taskprogress task="Connect Scan" time="1699616929" percent="57.69" remaining="289" etc="1699617218"/>
+<taskprogress task="Connect Scan" time="1699616977" percent="63.59" remaining="254" etc="1699617230"/>
+<taskprogress task="Connect Scan" time="1699617016" percent="68.93" remaining="217" etc="1699617233"/>
+<taskprogress task="Connect Scan" time="1699617055" percent="74.10" remaining="182" etc="1699617237"/>
+<taskprogress task="Connect Scan" time="1699617103" percent="79.58" remaining="146" etc="1699617249"/>
+<taskprogress task="Connect Scan" time="1699617151" percent="84.85" remaining="110" etc="1699617261"/>
+<taskprogress task="Connect Scan" time="1699617205" percent="90.11" remaining="74" etc="1699617279"/>
+<taskprogress task="Connect Scan" time="1699617253" percent="95.37" remaining="35" etc="1699617288"/>
+<taskend task="Connect Scan" time="1699617307" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1699617307"/>
+<taskend task="Service scan" time="1699617313" extrainfo="3 services on 1 host"/>
+<taskbegin task="NSE" time="1699617313"/>
+<taskend task="NSE" time="1699617317"/>
+<taskbegin task="NSE" time="1699617317"/>
+<taskend task="NSE" time="1699617317"/>
+<taskbegin task="NSE" time="1699617317"/>
+<taskend task="NSE" time="1699617317"/>
+<host starttime="1699616535" endtime="1699617317"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.129.41.132" addrtype="ipv4"/>
+<hostnames>
+<hostname name="codify.htb" type="user"/>
+<hostname name="codify.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65527">
+<extrareasons reason="conn-refused" count="65527" proto="tcp" ports="1-21,23-79,81-1454,1456-2999,3001-6535,6537-24171,24173-24988,24990-42432,42434-65535"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="8.9p1 Ubuntu 3ubuntu0.4" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  256 96:07:1c:c6:77:3e:07:a0:cc:6f:24:19:74:4d:57:0b (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBN+/g3FqMmVlkT3XCSMH/JtvGJDW3+PBxqJ+pURQey6GMjs7abbrEOCcVugczanWj1WNU5jsaYzlkCEZHlsHLvk=&#xa;  256 0b:a4:c0:cf:e2:3b:95:ae:f6:f5:df:7d:0c:88:d6:ce (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIm6HJTYy2teiiP6uZoSCHhsWHN+z3SVL/21fy6cZWZi"><table>
+<elem key="bits">256</elem>
+<elem key="fingerprint">96071cc6773e07a0cc6f2419744d570b</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBN+/g3FqMmVlkT3XCSMH/JtvGJDW3+PBxqJ+pURQey6GMjs7abbrEOCcVugczanWj1WNU5jsaYzlkCEZHlsHLvk=</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="fingerprint">0ba4c0cfe23b95aef6f5df7d0c88d6ce</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIIm6HJTYy2teiiP6uZoSCHhsWHN+z3SVL/21fy6cZWZi</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.52" hostname="codify.htb" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.52</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.52 (Ubuntu)"><elem>Apache/2.4.52 (Ubuntu)</elem>
+</script><script id="http-title" output="Codify"><elem key="title">Codify</elem>
+</script></port>
+<port protocol="tcp" portid="1455"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="esl-lm" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Node.js Express framework" method="probed" conf="10"><cpe>cpe:/a:nodejs:node.js</cpe></service><script id="http-title" output="Codify"><elem key="title">Codify</elem>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="6536"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="24172"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="24989"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="42433"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+</ports>
+<times srtt="133538" rttvar="3757" to="148566"/>
+</host>
+<taskbegin task="NSE" time="1699617317"/>
+<taskend task="NSE" time="1699617317"/>
+<taskbegin task="NSE" time="1699617317"/>
+<taskend task="NSE" time="1699617317"/>
+<taskbegin task="NSE" time="1699617317"/>
+<taskend task="NSE" time="1699617317"/>
+<runstats><finished time="1699617317" timestr="Fri Nov 10 22:25:17 2023" summary="Nmap done at Fri Nov 10 22:25:17 2023; 1 IP address (1 host up) scanned in 782.93 seconds" elapsed="782.93" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

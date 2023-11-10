@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Fri Nov 10 22:12:41 2023 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 3000 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/src/oscp/results/codify.htb/scans/tcp3000/tcp_3000_http_nmap.txt -oX /home/kali/src/oscp/results/codify.htb/scans/tcp3000/xml/tcp_3000_http_nmap.xml codify.htb -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 3000 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/src/oscp/results/codify.htb/scans/tcp3000/tcp_3000_http_nmap.txt -oX /home/kali/src/oscp/results/codify.htb/scans/tcp3000/xml/tcp_3000_http_nmap.xml codify.htb" start="1699616561" startstr="Fri Nov 10 22:12:41 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="3000"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1699616561"/>
+<taskend task="NSE" time="1699616561"/>
+<taskbegin task="NSE" time="1699616562"/>
+<taskend task="NSE" time="1699616562"/>
+<taskbegin task="NSE" time="1699616562"/>
+<taskend task="NSE" time="1699616562"/>
+<taskbegin task="Connect Scan" time="1699616562"/>
+<taskend task="Connect Scan" time="1699616562" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1699616562"/>
+<taskend task="Service scan" time="1699616568" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1699616568"/>
+<taskprogress task="NSE" time="1699616599" percent="99.02" remaining="1" etc="1699616599"/>
+<taskprogress task="NSE" time="1699616629" percent="99.02" remaining="1" etc="1699616630"/>
+<taskprogress task="NSE" time="1699616659" percent="99.02" remaining="1" etc="1699616660"/>
+<taskprogress task="NSE" time="1699616689" percent="99.67" remaining="1" etc="1699616689"/>
+<taskprogress task="NSE" time="1699616719" percent="99.67" remaining="1" etc="1699616719"/>
+<taskprogress task="NSE" time="1699616749" percent="99.67" remaining="1" etc="1699616750"/>
+<taskprogress task="NSE" time="1699616779" percent="99.67" remaining="1" etc="1699616780"/>
+<taskprogress task="NSE" time="1699616809" percent="99.67" remaining="1" etc="1699616810"/>
+<taskprogress task="NSE" time="1699616839" percent="99.67" remaining="1" etc="1699616840"/>
+<taskprogress task="NSE" time="1699616869" percent="99.67" remaining="1" etc="1699616870"/>
+<taskprogress task="NSE" time="1699616899" percent="99.67" remaining="2" etc="1699616900"/>
+<taskend task="NSE" time="1699616913"/>
+<taskbegin task="NSE" time="1699616913"/>
+<taskend task="NSE" time="1699616913"/>
+<taskbegin task="NSE" time="1699616913"/>
+<taskend task="NSE" time="1699616913"/>
+<host starttime="1699616562" endtime="1699616913"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.129.41.132" addrtype="ipv4"/>
+<hostnames>
+<hostname name="codify.htb" type="user"/>
+<hostname name="codify.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="3000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Node.js Express framework" method="probed" conf="10"><cpe>cpe:/a:nodejs:node.js</cpe></service><script id="http-vuln-cve2011-3192" output="&#xa;  VULNERABLE:&#xa;  Apache byterange filter DoS&#xa;    State: VULNERABLE&#xa;    IDs:  CVE:CVE-2011-3192  BID:49303&#xa;      The Apache web server is vulnerable to a denial of service attack when numerous&#xa;      overlapping byte ranges are requested.&#xa;    Disclosure date: 2011-08-19&#xa;    References:&#xa;      https://www.securityfocus.com/bid/49303&#xa;      https://www.tenable.com/plugins/nessus/55976&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192&#xa;      https://seclists.org/fulldisclosure/2011/Aug/175&#xa;"><table key="CVE-2011-3192">
+<elem key="title">Apache byterange filter DoS</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2011-3192</elem>
+<elem>BID:49303</elem>
+</table>
+<table key="description">
+<elem>The Apache web server is vulnerable to a denial of service attack when numerous&#xa;overlapping byte ranges are requested.</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="month">08</elem>
+<elem key="day">19</elem>
+<elem key="year">2011</elem>
+</table>
+</table>
+<elem key="disclosure">2011-08-19</elem>
+<table key="refs">
+<elem>https://www.securityfocus.com/bid/49303</elem>
+<elem>https://www.tenable.com/plugins/nessus/55976</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192</elem>
+<elem>https://seclists.org/fulldisclosure/2011/Aug/175</elem>
+</table>
+</table>
+</script><script id="http-grep" output="&#xa;  (1) http://codify.htb:3000/limitations: &#xa;    (1) email: &#xa;      + support@codify.htb"><table key="(1) http://codify.htb:3000/limitations">
+<table key="(1) email">
+<elem>+ support@codify.htb</elem>
+</table>
+</table>
+</script><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-date" output="Fri, 10 Nov 2023 11:42:39 GMT; -14s from local time."><elem key="date">2023-11-10T11:42:39+00:00</elem>
+<elem key="delta">-14.0</elem>
+</script><script id="http-errors" output="Couldn&apos;t find any error pages."/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-vhosts" output="&#xa;128 names had status 200"/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-config-backup" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-devframework" output="Express detected. Found Express in X-Powered-By Header"/><script id="http-chrono" output="Request times for /; avg: 390.66ms; min: 341.09ms; max: 442.72ms"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-headers" output="&#xa;  X-Powered-By: Express&#xa;  Accept-Ranges: bytes&#xa;  Cache-Control: public, max-age=0&#xa;  Last-Modified: Tue, 11 Apr 2023 11:29:55 GMT&#xa;  ETag: W/&quot;8dd-18770145b38&quot;&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  Content-Length: 2269&#xa;  Date: Fri, 10 Nov 2023 11:42:36 GMT&#xa;  Connection: close&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-title" output="Codify"><elem key="title">Codify</elem>
+</script><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 4&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    Other: 4&#xa;"/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-php-version" output="Logo query returned unknown hash 24c39ce4ff06a13f59d5be014845ecda&#xa;Credits query returned unknown hash 24c39ce4ff06a13f59d5be014845ecda"/><script id="http-security-headers" output="&#xa;  Cache_Control: &#xa;    Header: Cache-Control: public, max-age=0"><table key="Cache_Control">
+<elem>Header: Cache-Control: public, max-age=0</elem>
+</table>
+</script><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-referer-checker" output="&#xa;Spidering limited to: maxpagecount=30&#xa;  https://cdnjs.cloudflare.com:443/ajax/libs/popper.js/1.14.7/umd/popper.min.js&#xa;  https://code.jquery.com:443/jquery-3.3.1.slim.min.js&#xa;  https://stackpath.bootstrapcdn.com:443/bootstrap/4.3.1/js/bootstrap.min.js&#xa;"/><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/></port>
+</ports>
+<times srtt="127720" rttvar="127720" to="638600"/>
+</host>
+<taskbegin task="NSE" time="1699616913"/>
+<taskend task="NSE" time="1699616913"/>
+<taskbegin task="NSE" time="1699616913"/>
+<taskend task="NSE" time="1699616913"/>
+<taskbegin task="NSE" time="1699616913"/>
+<taskend task="NSE" time="1699616913"/>
+<runstats><finished time="1699616913" timestr="Fri Nov 10 22:18:33 2023" summary="Nmap done at Fri Nov 10 22:18:33 2023; 1 IP address (1 host up) scanned in 352.19 seconds" elapsed="352.19" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
