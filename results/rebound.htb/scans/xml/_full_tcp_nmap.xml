@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Sun Nov 12 02:49:56 2023 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/src/oscp/results/rebound.htb/scans/_full_tcp_nmap.txt -oX /home/kali/src/oscp/results/rebound.htb/scans/xml/_full_tcp_nmap.xml rebound.htb -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/src/oscp/results/rebound.htb/scans/_full_tcp_nmap.txt -oX /home/kali/src/oscp/results/rebound.htb/scans/xml/_full_tcp_nmap.xml rebound.htb" start="1699719596" startstr="Sun Nov 12 02:49:56 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1699719597"/>
+<taskend task="NSE" time="1699719597"/>
+<taskbegin task="NSE" time="1699719597"/>
+<taskend task="NSE" time="1699719597"/>
+<taskbegin task="NSE" time="1699719597"/>
+<taskend task="NSE" time="1699719597"/>
+<taskbegin task="Connect Scan" time="1699719597"/>
+<taskprogress task="Connect Scan" time="1699719628" percent="5.50" remaining="533" etc="1699720161"/>

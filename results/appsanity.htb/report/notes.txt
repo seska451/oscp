@@ -9,4 +9,9 @@
 [*] wsman found on tcp/5985.
 
 
+supervisor account:
+jim@j1m.jim
+
+patient account:
+seska@test1.com
 

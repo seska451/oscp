@@ -22,9 +22,9 @@ Useful things running on the host:
 - docker
 - python3
 
-Usernames
-- svc
-- joshua
+Usernames:Passwords
+- svc:???
+- joshua:spongebob1
 - _laurel
 
 Several SQLite db's exist on the host one contains support tickets giving a password hash for the `joshua` user
@@ -46,10 +46,33 @@ Press 'q' or Ctrl-C to abort, almost any other key for status
 spongebob1       (joshua)     
 1g 0:00:00:21 DONE (2023-11-11 06:50) 0.04739g/s 64.83p/s 64.83c/s 64.83C/s 0000000000..lacoste
 Use the "--show" option to display all of the cracked passwords reliably
-Session completed. 
-                     
+Session completed.         
 ```
 
+This is also the password for the host user `joshua`. Running sudo -l shows that joshua may run the following script as `root`.
+
+User joshua may run the following commands on codify:
+    (root) /opt/scripts/mysql-backup.sh
+
+
+You can bypass the password check to successfully backup the db by using a wildcard `*` - however this means that we can use the wildcard to bruteforce the password used for root. This also happens to be the root account password.
+
+The joshua user can access the db with their ssh password
+```bash
+joshua@codify:~$ /usr/bin/mysql -u "joshua" -h 0.0.0.0 -P 3306 -p"spongebob1" -e "SELECT User, Password FROM mysql.user"
+mysql: [Warning] Using a password on the command line interface can be insecure.
++-------------+-------------------------------------------+
+| User        | Password                                  |
++-------------+-------------------------------------------+
+| mariadb.sys |                                           |
+| root        | *4ECCEBD05161B6782081E970D9D2C72138197218 |
+| root        | *4ECCEBD05161B6782081E970D9D2C72138197218 |
+| passbolt    | *63DA7233CC5151B814CBEC5AF8B3EAC43347A203 |
+| joshua      | *323A5EDCBFA127CC75F6C155457533AC1D5C4921 |
+| root        | *4ECCEBD05161B6782081E970D9D2C72138197218 |
++-------------+-------------------------------------------+
+```
+The root password hash does not match any in rockyou.txt
 
 [*] ssh found on tcp/22.
 

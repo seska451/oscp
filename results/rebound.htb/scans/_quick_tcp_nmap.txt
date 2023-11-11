@@ -1,0 +1,1 @@
+# Nmap 7.94 scan initiated Sun Nov 12 02:49:56 2023 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN /home/kali/src/oscp/results/rebound.htb/scans/_quick_tcp_nmap.txt -oX /home/kali/src/oscp/results/rebound.htb/scans/xml/_quick_tcp_nmap.xml rebound.htb
