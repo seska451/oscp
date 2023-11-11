@@ -14,3 +14,5 @@
 <taskend task="NSE" time="1699719597"/>
 <taskbegin task="Connect Scan" time="1699719597"/>
 <taskprogress task="Connect Scan" time="1699719628" percent="5.50" remaining="533" etc="1699720161"/>
+<taskprogress task="Connect Scan" time="1699719685" percent="14.98" remaining="500" etc="1699720184"/>
+<taskprogress task="Connect Scan" time="1699719715" percent="22.12" remaining="416" etc="1699720131"/>

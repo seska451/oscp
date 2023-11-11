@@ -1,0 +1,1 @@
+# Nmap 7.94 scan initiated Sun Nov 12 02:51:21 2023 as: nmap -vv --reason -Pn -T4 -sV -p 53 "--script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/src/oscp/results/rebound.htb/scans/tcp53/tcp_53_dns_nmap.txt -oX /home/kali/src/oscp/results/rebound.htb/scans/tcp53/xml/tcp_53_dns_nmap.xml rebound.htb

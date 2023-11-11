@@ -1,1 +1,214 @@
 # Nmap 7.94 scan initiated Sun Nov 12 02:49:56 2023 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN /home/kali/src/oscp/results/rebound.htb/scans/_quick_tcp_nmap.txt -oX /home/kali/src/oscp/results/rebound.htb/scans/xml/_quick_tcp_nmap.xml rebound.htb
+Nmap scan report for rebound.htb (10.129.229.114)
+Host is up, received user-set (0.13s latency).
+Scanned at 2023-11-12 02:49:57 ACDT for 83s
+Not shown: 989 closed tcp ports (conn-refused)
+PORT     STATE SERVICE       REASON  VERSION
+53/tcp   open  domain        syn-ack Simple DNS Plus
+88/tcp   open  kerberos-sec  syn-ack Microsoft Windows Kerberos (server time: 2023-11-11 23:19:54Z)
+135/tcp  open  msrpc         syn-ack Microsoft Windows RPC
+139/tcp  open  netbios-ssn   syn-ack Microsoft Windows netbios-ssn
+389/tcp  open  ldap          syn-ack Microsoft Windows Active Directory LDAP (Domain: rebound.htb0., Site: Default-First-Site-Name)
+| ssl-cert: Subject: 
+| Subject Alternative Name: DNS:dc01.rebound.htb
+| Issuer: commonName=rebound-DC01-CA/domainComponent=rebound
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2023-08-25T22:48:10
+| Not valid after:  2024-08-24T22:48:10
+| MD5:   6605:cbae:f659:f555:d80b:7a18:adfb:6ce8
+| SHA-1: af8b:ec72:779e:7a0f:41ad:0302:eff5:a6ab:22f0:1c74
+| -----BEGIN CERTIFICATE-----
+| MIIFxzCCBK+gAwIBAgITbwAAAASsurxVn5d8IgAAAAAABDANBgkqhkiG9w0BAQsF
+| ADBIMRMwEQYKCZImiZPyLGQBGRYDaHRiMRcwFQYKCZImiZPyLGQBGRYHcmVib3Vu
+| ZDEYMBYGA1UEAxMPcmVib3VuZC1EQzAxLUNBMB4XDTIzMDgyNTIyNDgxMFoXDTI0
+| MDgyNDIyNDgxMFowADCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKmB
+| 3pF8ECFw39yFvrlzfnzO5/p5R5L2KGDuRV12ZaDO+0z9R4sgqcJQ9m/fArs1aIEL
+| b6C8DIoaKHfILP+50rA3q/OkmyNFs8hIaa+Ja1w3diulCI/d/ewgnUSys3pw3xie
+| Xkup22Sgy3yLPfrb+J67u+oDVD7Gt0e7gn7+vwwgcolGi2ypyg4Z2x1oEjum0+S5
+| ZyMOuJhMNYfaRt7T91ahxzS2HS6ZOX+Iz6qvcg1sn36VMzu+T/hgWk3njMiJKk46
+| HW+KACZWS0uxXdADTs0pqKm8Ses2EHU1cKITkF2PDEjwhXMA46TGjIdwSqNWb4JS
+| wL4o1QuzH1bPaDobJBECAwEAAaOCAvAwggLsMDYGCSsGAQQBgjcVBwQpMCcGHysG
+| AQQBgjcVCIe1tX2/jH2CuYk0hp/UUoHi5h51ARwCAW4CAQAwKQYDVR0lBCIwIAYI
+| KwYBBQUHAwIGCCsGAQUFBwMBBgorBgEEAYI3FAICMA4GA1UdDwEB/wQEAwIFoDA1
+| BgkrBgEEAYI3FQoEKDAmMAoGCCsGAQUFBwMCMAoGCCsGAQUFBwMBMAwGCisGAQQB
+| gjcUAgIwHQYDVR0OBBYEFCJgDfv17RVr8NMSp5UAii6hNEBZMB8GA1UdIwQYMBaA
+| FJuYW0Dn6Cuc7TMWlSQCyWiq2+1NMIHKBgNVHR8EgcIwgb8wgbyggbmggbaGgbNs
+| ZGFwOi8vL0NOPXJlYm91bmQtREMwMS1DQSxDTj1kYzAxLENOPUNEUCxDTj1QdWJs
+| aWMlMjBLZXklMjBTZXJ2aWNlcyxDTj1TZXJ2aWNlcyxDTj1Db25maWd1cmF0aW9u
+| LERDPXJlYm91bmQsREM9aHRiP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3Q/YmFz
+| ZT9vYmplY3RDbGFzcz1jUkxEaXN0cmlidXRpb25Qb2ludDCBwQYIKwYBBQUHAQEE
+| gbQwgbEwga4GCCsGAQUFBzAChoGhbGRhcDovLy9DTj1yZWJvdW5kLURDMDEtQ0Es
+| Q049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENO
+| PUNvbmZpZ3VyYXRpb24sREM9cmVib3VuZCxEQz1odGI/Y0FDZXJ0aWZpY2F0ZT9i
+| YXNlP29iamVjdENsYXNzPWNlcnRpZmljYXRpb25BdXRob3JpdHkwHgYDVR0RAQH/
+| BBQwEoIQZGMwMS5yZWJvdW5kLmh0YjBPBgkrBgEEAYI3GQIEQjBAoD4GCisGAQQB
+| gjcZAgGgMAQuUy0xLTUtMjEtNDA3ODM4MjIzNy0xNDkyMTgyODE3LTI1NjgxMjcy
+| MDktMTAwMDANBgkqhkiG9w0BAQsFAAOCAQEAw4L5FKWTdqtt+YemCeYgmhbZSZqm
+| 3Dg6MyXvVvgheQ5v3wBRDokQYdouu7rV2ylPGC2AwIblaayLn1JaMYbg4BuM5N0L
+| aOInfqQqCGKkEA/dvuM0Wbq+rZWXOhCSmHof6cdcjwhXzINU1kEAEYYJJ5I8xZG6
+| FkR5JloYTCDhicy6MXUy5fk3STs8gQHjHrh3e49Osa0BaaM20XloFkOqv4dm2Avg
+| 76RNsjZhPQFXv/QqVhrMII2H0W8LwxArl9t7KARejLqTq5c0RtIuz5qCZEKCmswZ
+| cvuQPYlbVMOvuQuf3Up+FYRhfkbe0N1KABXJV0pG2OJ0eF8i3JkdBO5tmg==
+|_-----END CERTIFICATE-----
+|_ssl-date: 2023-11-11T23:21:06+00:00; +6h59m46s from scanner time.
+445/tcp  open  microsoft-ds? syn-ack
+464/tcp  open  kpasswd5?     syn-ack
+593/tcp  open  ncacn_http    syn-ack Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  ssl/ldap      syn-ack Microsoft Windows Active Directory LDAP (Domain: rebound.htb0., Site: Default-First-Site-Name)
+|_ssl-date: 2023-11-11T23:21:05+00:00; +6h59m45s from scanner time.
+| ssl-cert: Subject: 
+| Subject Alternative Name: DNS:dc01.rebound.htb
+| Issuer: commonName=rebound-DC01-CA/domainComponent=rebound
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2023-08-25T22:48:10
+| Not valid after:  2024-08-24T22:48:10
+| MD5:   6605:cbae:f659:f555:d80b:7a18:adfb:6ce8
+| SHA-1: af8b:ec72:779e:7a0f:41ad:0302:eff5:a6ab:22f0:1c74
+| -----BEGIN CERTIFICATE-----
+| MIIFxzCCBK+gAwIBAgITbwAAAASsurxVn5d8IgAAAAAABDANBgkqhkiG9w0BAQsF
+| ADBIMRMwEQYKCZImiZPyLGQBGRYDaHRiMRcwFQYKCZImiZPyLGQBGRYHcmVib3Vu
+| ZDEYMBYGA1UEAxMPcmVib3VuZC1EQzAxLUNBMB4XDTIzMDgyNTIyNDgxMFoXDTI0
+| MDgyNDIyNDgxMFowADCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKmB
+| 3pF8ECFw39yFvrlzfnzO5/p5R5L2KGDuRV12ZaDO+0z9R4sgqcJQ9m/fArs1aIEL
+| b6C8DIoaKHfILP+50rA3q/OkmyNFs8hIaa+Ja1w3diulCI/d/ewgnUSys3pw3xie
+| Xkup22Sgy3yLPfrb+J67u+oDVD7Gt0e7gn7+vwwgcolGi2ypyg4Z2x1oEjum0+S5
+| ZyMOuJhMNYfaRt7T91ahxzS2HS6ZOX+Iz6qvcg1sn36VMzu+T/hgWk3njMiJKk46
+| HW+KACZWS0uxXdADTs0pqKm8Ses2EHU1cKITkF2PDEjwhXMA46TGjIdwSqNWb4JS
+| wL4o1QuzH1bPaDobJBECAwEAAaOCAvAwggLsMDYGCSsGAQQBgjcVBwQpMCcGHysG
+| AQQBgjcVCIe1tX2/jH2CuYk0hp/UUoHi5h51ARwCAW4CAQAwKQYDVR0lBCIwIAYI
+| KwYBBQUHAwIGCCsGAQUFBwMBBgorBgEEAYI3FAICMA4GA1UdDwEB/wQEAwIFoDA1
+| BgkrBgEEAYI3FQoEKDAmMAoGCCsGAQUFBwMCMAoGCCsGAQUFBwMBMAwGCisGAQQB
+| gjcUAgIwHQYDVR0OBBYEFCJgDfv17RVr8NMSp5UAii6hNEBZMB8GA1UdIwQYMBaA
+| FJuYW0Dn6Cuc7TMWlSQCyWiq2+1NMIHKBgNVHR8EgcIwgb8wgbyggbmggbaGgbNs
+| ZGFwOi8vL0NOPXJlYm91bmQtREMwMS1DQSxDTj1kYzAxLENOPUNEUCxDTj1QdWJs
+| aWMlMjBLZXklMjBTZXJ2aWNlcyxDTj1TZXJ2aWNlcyxDTj1Db25maWd1cmF0aW9u
+| LERDPXJlYm91bmQsREM9aHRiP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3Q/YmFz
+| ZT9vYmplY3RDbGFzcz1jUkxEaXN0cmlidXRpb25Qb2ludDCBwQYIKwYBBQUHAQEE
+| gbQwgbEwga4GCCsGAQUFBzAChoGhbGRhcDovLy9DTj1yZWJvdW5kLURDMDEtQ0Es
+| Q049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENO
+| PUNvbmZpZ3VyYXRpb24sREM9cmVib3VuZCxEQz1odGI/Y0FDZXJ0aWZpY2F0ZT9i
+| YXNlP29iamVjdENsYXNzPWNlcnRpZmljYXRpb25BdXRob3JpdHkwHgYDVR0RAQH/
+| BBQwEoIQZGMwMS5yZWJvdW5kLmh0YjBPBgkrBgEEAYI3GQIEQjBAoD4GCisGAQQB
+| gjcZAgGgMAQuUy0xLTUtMjEtNDA3ODM4MjIzNy0xNDkyMTgyODE3LTI1NjgxMjcy
+| MDktMTAwMDANBgkqhkiG9w0BAQsFAAOCAQEAw4L5FKWTdqtt+YemCeYgmhbZSZqm
+| 3Dg6MyXvVvgheQ5v3wBRDokQYdouu7rV2ylPGC2AwIblaayLn1JaMYbg4BuM5N0L
+| aOInfqQqCGKkEA/dvuM0Wbq+rZWXOhCSmHof6cdcjwhXzINU1kEAEYYJJ5I8xZG6
+| FkR5JloYTCDhicy6MXUy5fk3STs8gQHjHrh3e49Osa0BaaM20XloFkOqv4dm2Avg
+| 76RNsjZhPQFXv/QqVhrMII2H0W8LwxArl9t7KARejLqTq5c0RtIuz5qCZEKCmswZ
+| cvuQPYlbVMOvuQuf3Up+FYRhfkbe0N1KABXJV0pG2OJ0eF8i3JkdBO5tmg==
+|_-----END CERTIFICATE-----
+3268/tcp open  ldap          syn-ack Microsoft Windows Active Directory LDAP (Domain: rebound.htb0., Site: Default-First-Site-Name)
+| ssl-cert: Subject: 
+| Subject Alternative Name: DNS:dc01.rebound.htb
+| Issuer: commonName=rebound-DC01-CA/domainComponent=rebound
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2023-08-25T22:48:10
+| Not valid after:  2024-08-24T22:48:10
+| MD5:   6605:cbae:f659:f555:d80b:7a18:adfb:6ce8
+| SHA-1: af8b:ec72:779e:7a0f:41ad:0302:eff5:a6ab:22f0:1c74
+| -----BEGIN CERTIFICATE-----
+| MIIFxzCCBK+gAwIBAgITbwAAAASsurxVn5d8IgAAAAAABDANBgkqhkiG9w0BAQsF
+| ADBIMRMwEQYKCZImiZPyLGQBGRYDaHRiMRcwFQYKCZImiZPyLGQBGRYHcmVib3Vu
+| ZDEYMBYGA1UEAxMPcmVib3VuZC1EQzAxLUNBMB4XDTIzMDgyNTIyNDgxMFoXDTI0
+| MDgyNDIyNDgxMFowADCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKmB
+| 3pF8ECFw39yFvrlzfnzO5/p5R5L2KGDuRV12ZaDO+0z9R4sgqcJQ9m/fArs1aIEL
+| b6C8DIoaKHfILP+50rA3q/OkmyNFs8hIaa+Ja1w3diulCI/d/ewgnUSys3pw3xie
+| Xkup22Sgy3yLPfrb+J67u+oDVD7Gt0e7gn7+vwwgcolGi2ypyg4Z2x1oEjum0+S5
+| ZyMOuJhMNYfaRt7T91ahxzS2HS6ZOX+Iz6qvcg1sn36VMzu+T/hgWk3njMiJKk46
+| HW+KACZWS0uxXdADTs0pqKm8Ses2EHU1cKITkF2PDEjwhXMA46TGjIdwSqNWb4JS
+| wL4o1QuzH1bPaDobJBECAwEAAaOCAvAwggLsMDYGCSsGAQQBgjcVBwQpMCcGHysG
+| AQQBgjcVCIe1tX2/jH2CuYk0hp/UUoHi5h51ARwCAW4CAQAwKQYDVR0lBCIwIAYI
+| KwYBBQUHAwIGCCsGAQUFBwMBBgorBgEEAYI3FAICMA4GA1UdDwEB/wQEAwIFoDA1
+| BgkrBgEEAYI3FQoEKDAmMAoGCCsGAQUFBwMCMAoGCCsGAQUFBwMBMAwGCisGAQQB
+| gjcUAgIwHQYDVR0OBBYEFCJgDfv17RVr8NMSp5UAii6hNEBZMB8GA1UdIwQYMBaA
+| FJuYW0Dn6Cuc7TMWlSQCyWiq2+1NMIHKBgNVHR8EgcIwgb8wgbyggbmggbaGgbNs
+| ZGFwOi8vL0NOPXJlYm91bmQtREMwMS1DQSxDTj1kYzAxLENOPUNEUCxDTj1QdWJs
+| aWMlMjBLZXklMjBTZXJ2aWNlcyxDTj1TZXJ2aWNlcyxDTj1Db25maWd1cmF0aW9u
+| LERDPXJlYm91bmQsREM9aHRiP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3Q/YmFz
+| ZT9vYmplY3RDbGFzcz1jUkxEaXN0cmlidXRpb25Qb2ludDCBwQYIKwYBBQUHAQEE
+| gbQwgbEwga4GCCsGAQUFBzAChoGhbGRhcDovLy9DTj1yZWJvdW5kLURDMDEtQ0Es
+| Q049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENO
+| PUNvbmZpZ3VyYXRpb24sREM9cmVib3VuZCxEQz1odGI/Y0FDZXJ0aWZpY2F0ZT9i
+| YXNlP29iamVjdENsYXNzPWNlcnRpZmljYXRpb25BdXRob3JpdHkwHgYDVR0RAQH/
+| BBQwEoIQZGMwMS5yZWJvdW5kLmh0YjBPBgkrBgEEAYI3GQIEQjBAoD4GCisGAQQB
+| gjcZAgGgMAQuUy0xLTUtMjEtNDA3ODM4MjIzNy0xNDkyMTgyODE3LTI1NjgxMjcy
+| MDktMTAwMDANBgkqhkiG9w0BAQsFAAOCAQEAw4L5FKWTdqtt+YemCeYgmhbZSZqm
+| 3Dg6MyXvVvgheQ5v3wBRDokQYdouu7rV2ylPGC2AwIblaayLn1JaMYbg4BuM5N0L
+| aOInfqQqCGKkEA/dvuM0Wbq+rZWXOhCSmHof6cdcjwhXzINU1kEAEYYJJ5I8xZG6
+| FkR5JloYTCDhicy6MXUy5fk3STs8gQHjHrh3e49Osa0BaaM20XloFkOqv4dm2Avg
+| 76RNsjZhPQFXv/QqVhrMII2H0W8LwxArl9t7KARejLqTq5c0RtIuz5qCZEKCmswZ
+| cvuQPYlbVMOvuQuf3Up+FYRhfkbe0N1KABXJV0pG2OJ0eF8i3JkdBO5tmg==
+|_-----END CERTIFICATE-----
+|_ssl-date: 2023-11-11T23:21:06+00:00; +6h59m46s from scanner time.
+3269/tcp open  ssl/ldap      syn-ack Microsoft Windows Active Directory LDAP (Domain: rebound.htb0., Site: Default-First-Site-Name)
+|_ssl-date: 2023-11-11T23:21:05+00:00; +6h59m45s from scanner time.
+| ssl-cert: Subject: 
+| Subject Alternative Name: DNS:dc01.rebound.htb
+| Issuer: commonName=rebound-DC01-CA/domainComponent=rebound
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2023-08-25T22:48:10
+| Not valid after:  2024-08-24T22:48:10
+| MD5:   6605:cbae:f659:f555:d80b:7a18:adfb:6ce8
+| SHA-1: af8b:ec72:779e:7a0f:41ad:0302:eff5:a6ab:22f0:1c74
+| -----BEGIN CERTIFICATE-----
+| MIIFxzCCBK+gAwIBAgITbwAAAASsurxVn5d8IgAAAAAABDANBgkqhkiG9w0BAQsF
+| ADBIMRMwEQYKCZImiZPyLGQBGRYDaHRiMRcwFQYKCZImiZPyLGQBGRYHcmVib3Vu
+| ZDEYMBYGA1UEAxMPcmVib3VuZC1EQzAxLUNBMB4XDTIzMDgyNTIyNDgxMFoXDTI0
+| MDgyNDIyNDgxMFowADCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKmB
+| 3pF8ECFw39yFvrlzfnzO5/p5R5L2KGDuRV12ZaDO+0z9R4sgqcJQ9m/fArs1aIEL
+| b6C8DIoaKHfILP+50rA3q/OkmyNFs8hIaa+Ja1w3diulCI/d/ewgnUSys3pw3xie
+| Xkup22Sgy3yLPfrb+J67u+oDVD7Gt0e7gn7+vwwgcolGi2ypyg4Z2x1oEjum0+S5
+| ZyMOuJhMNYfaRt7T91ahxzS2HS6ZOX+Iz6qvcg1sn36VMzu+T/hgWk3njMiJKk46
+| HW+KACZWS0uxXdADTs0pqKm8Ses2EHU1cKITkF2PDEjwhXMA46TGjIdwSqNWb4JS
+| wL4o1QuzH1bPaDobJBECAwEAAaOCAvAwggLsMDYGCSsGAQQBgjcVBwQpMCcGHysG
+| AQQBgjcVCIe1tX2/jH2CuYk0hp/UUoHi5h51ARwCAW4CAQAwKQYDVR0lBCIwIAYI
+| KwYBBQUHAwIGCCsGAQUFBwMBBgorBgEEAYI3FAICMA4GA1UdDwEB/wQEAwIFoDA1
+| BgkrBgEEAYI3FQoEKDAmMAoGCCsGAQUFBwMCMAoGCCsGAQUFBwMBMAwGCisGAQQB
+| gjcUAgIwHQYDVR0OBBYEFCJgDfv17RVr8NMSp5UAii6hNEBZMB8GA1UdIwQYMBaA
+| FJuYW0Dn6Cuc7TMWlSQCyWiq2+1NMIHKBgNVHR8EgcIwgb8wgbyggbmggbaGgbNs
+| ZGFwOi8vL0NOPXJlYm91bmQtREMwMS1DQSxDTj1kYzAxLENOPUNEUCxDTj1QdWJs
+| aWMlMjBLZXklMjBTZXJ2aWNlcyxDTj1TZXJ2aWNlcyxDTj1Db25maWd1cmF0aW9u
+| LERDPXJlYm91bmQsREM9aHRiP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3Q/YmFz
+| ZT9vYmplY3RDbGFzcz1jUkxEaXN0cmlidXRpb25Qb2ludDCBwQYIKwYBBQUHAQEE
+| gbQwgbEwga4GCCsGAQUFBzAChoGhbGRhcDovLy9DTj1yZWJvdW5kLURDMDEtQ0Es
+| Q049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENO
+| PUNvbmZpZ3VyYXRpb24sREM9cmVib3VuZCxEQz1odGI/Y0FDZXJ0aWZpY2F0ZT9i
+| YXNlP29iamVjdENsYXNzPWNlcnRpZmljYXRpb25BdXRob3JpdHkwHgYDVR0RAQH/
+| BBQwEoIQZGMwMS5yZWJvdW5kLmh0YjBPBgkrBgEEAYI3GQIEQjBAoD4GCisGAQQB
+| gjcZAgGgMAQuUy0xLTUtMjEtNDA3ODM4MjIzNy0xNDkyMTgyODE3LTI1NjgxMjcy
+| MDktMTAwMDANBgkqhkiG9w0BAQsFAAOCAQEAw4L5FKWTdqtt+YemCeYgmhbZSZqm
+| 3Dg6MyXvVvgheQ5v3wBRDokQYdouu7rV2ylPGC2AwIblaayLn1JaMYbg4BuM5N0L
+| aOInfqQqCGKkEA/dvuM0Wbq+rZWXOhCSmHof6cdcjwhXzINU1kEAEYYJJ5I8xZG6
+| FkR5JloYTCDhicy6MXUy5fk3STs8gQHjHrh3e49Osa0BaaM20XloFkOqv4dm2Avg
+| 76RNsjZhPQFXv/QqVhrMII2H0W8LwxArl9t7KARejLqTq5c0RtIuz5qCZEKCmswZ
+| cvuQPYlbVMOvuQuf3Up+FYRhfkbe0N1KABXJV0pG2OJ0eF8i3JkdBO5tmg==
+|_-----END CERTIFICATE-----
+Service Info: Host: DC01; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled and required
+|_clock-skew: mean: 6h59m45s, deviation: 0s, median: 6h59m45s
+| smb2-time: 
+|   date: 2023-11-11T23:20:57
+|_  start_date: N/A
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 21647/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 26464/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 37861/udp): CLEAN (Timeout)
+|   Check 4 (port 10336/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Nov 12 02:51:20 2023 -- 1 IP address (1 host up) scanned in 84.25 seconds

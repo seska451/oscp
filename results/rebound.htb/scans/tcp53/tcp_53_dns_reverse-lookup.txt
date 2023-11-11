@@ -1,0 +1,9 @@
+;; communications error to 10.129.229.114#53: timed out
+;; communications error to 10.129.229.114#53: timed out
+;; communications error to 10.129.229.114#53: timed out
+
+; <<>> DiG 9.18.16-1-Debian <<>> -p 53 -x rebound.htb @rebound.htb
+;; global options: +cmd
+;; no servers could be reached
+
+

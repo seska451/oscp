@@ -1,0 +1,200 @@
+# Nmap 7.94 scan initiated Sun Nov 12 02:51:21 2023 as: nmap -vv --reason -Pn -T4 -sV -p 3268 "--script=banner,(ldap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/src/oscp/results/rebound.htb/scans/tcp3268/tcp_3268_ldap_nmap.txt -oX /home/kali/src/oscp/results/rebound.htb/scans/tcp3268/xml/tcp_3268_ldap_nmap.xml rebound.htb
+Nmap scan report for rebound.htb (10.129.229.114)
+Host is up, received user-set (0.13s latency).
+Scanned at 2023-11-12 02:51:21 ACDT for 31s
+
+PORT     STATE SERVICE REASON  VERSION
+3268/tcp open  ldap    syn-ack Microsoft Windows Active Directory LDAP (Domain: rebound.htb, Site: Default-First-Site-Name)
+|_ssl-date: 2023-11-11T23:21:21+00:00; +6h59m46s from scanner time.
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+| ldap-rootdse: 
+| LDAP Results
+|   <ROOT>
+|       domainFunctionality: 7
+|       forestFunctionality: 7
+|       domainControllerFunctionality: 7
+|       rootDomainNamingContext: DC=rebound,DC=htb
+|       ldapServiceName: rebound.htb:dc01$@REBOUND.HTB
+|       isGlobalCatalogReady: TRUE
+|       supportedSASLMechanisms: GSSAPI
+|       supportedSASLMechanisms: GSS-SPNEGO
+|       supportedSASLMechanisms: EXTERNAL
+|       supportedSASLMechanisms: DIGEST-MD5
+|       supportedLDAPVersion: 3
+|       supportedLDAPVersion: 2
+|       supportedLDAPPolicies: MaxPoolThreads
+|       supportedLDAPPolicies: MaxPercentDirSyncRequests
+|       supportedLDAPPolicies: MaxDatagramRecv
+|       supportedLDAPPolicies: MaxReceiveBuffer
+|       supportedLDAPPolicies: InitRecvTimeout
+|       supportedLDAPPolicies: MaxConnections
+|       supportedLDAPPolicies: MaxConnIdleTime
+|       supportedLDAPPolicies: MaxPageSize
+|       supportedLDAPPolicies: MaxBatchReturnMessages
+|       supportedLDAPPolicies: MaxQueryDuration
+|       supportedLDAPPolicies: MaxDirSyncDuration
+|       supportedLDAPPolicies: MaxTempTableSize
+|       supportedLDAPPolicies: MaxResultSetSize
+|       supportedLDAPPolicies: MinResultSets
+|       supportedLDAPPolicies: MaxResultSetsPerConn
+|       supportedLDAPPolicies: MaxNotificationPerConn
+|       supportedLDAPPolicies: MaxValRange
+|       supportedLDAPPolicies: MaxValRangeTransitive
+|       supportedLDAPPolicies: ThreadMemoryLimit
+|       supportedLDAPPolicies: SystemMemoryLimitPercent
+|       supportedControl: 1.2.840.113556.1.4.319
+|       supportedControl: 1.2.840.113556.1.4.801
+|       supportedControl: 1.2.840.113556.1.4.473
+|       supportedControl: 1.2.840.113556.1.4.528
+|       supportedControl: 1.2.840.113556.1.4.417
+|       supportedControl: 1.2.840.113556.1.4.619
+|       supportedControl: 1.2.840.113556.1.4.841
+|       supportedControl: 1.2.840.113556.1.4.529
+|       supportedControl: 1.2.840.113556.1.4.805
+|       supportedControl: 1.2.840.113556.1.4.521
+|       supportedControl: 1.2.840.113556.1.4.970
+|       supportedControl: 1.2.840.113556.1.4.1338
+|       supportedControl: 1.2.840.113556.1.4.474
+|       supportedControl: 1.2.840.113556.1.4.1339
+|       supportedControl: 1.2.840.113556.1.4.1340
+|       supportedControl: 1.2.840.113556.1.4.1413
+|       supportedControl: 2.16.840.1.113730.3.4.9
+|       supportedControl: 2.16.840.1.113730.3.4.10
+|       supportedControl: 1.2.840.113556.1.4.1504
+|       supportedControl: 1.2.840.113556.1.4.1852
+|       supportedControl: 1.2.840.113556.1.4.802
+|       supportedControl: 1.2.840.113556.1.4.1907
+|       supportedControl: 1.2.840.113556.1.4.1948
+|       supportedControl: 1.2.840.113556.1.4.1974
+|       supportedControl: 1.2.840.113556.1.4.1341
+|       supportedControl: 1.2.840.113556.1.4.2026
+|       supportedControl: 1.2.840.113556.1.4.2064
+|       supportedControl: 1.2.840.113556.1.4.2065
+|       supportedControl: 1.2.840.113556.1.4.2066
+|       supportedControl: 1.2.840.113556.1.4.2090
+|       supportedControl: 1.2.840.113556.1.4.2205
+|       supportedControl: 1.2.840.113556.1.4.2204
+|       supportedControl: 1.2.840.113556.1.4.2206
+|       supportedControl: 1.2.840.113556.1.4.2211
+|       supportedControl: 1.2.840.113556.1.4.2239
+|       supportedControl: 1.2.840.113556.1.4.2255
+|       supportedControl: 1.2.840.113556.1.4.2256
+|       supportedControl: 1.2.840.113556.1.4.2309
+|       supportedControl: 1.2.840.113556.1.4.2330
+|       supportedControl: 1.2.840.113556.1.4.2354
+|       supportedCapabilities: 1.2.840.113556.1.4.800
+|       supportedCapabilities: 1.2.840.113556.1.4.1670
+|       supportedCapabilities: 1.2.840.113556.1.4.1791
+|       supportedCapabilities: 1.2.840.113556.1.4.1935
+|       supportedCapabilities: 1.2.840.113556.1.4.2080
+|       supportedCapabilities: 1.2.840.113556.1.4.2237
+|       subschemaSubentry: CN=Aggregate,CN=Schema,CN=Configuration,DC=rebound,DC=htb
+|       serverName: CN=DC01,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=rebound,DC=htb
+|       schemaNamingContext: CN=Schema,CN=Configuration,DC=rebound,DC=htb
+|       namingContexts: DC=rebound,DC=htb
+|       namingContexts: CN=Configuration,DC=rebound,DC=htb
+|       namingContexts: CN=Schema,CN=Configuration,DC=rebound,DC=htb
+|       namingContexts: DC=DomainDnsZones,DC=rebound,DC=htb
+|       namingContexts: DC=ForestDnsZones,DC=rebound,DC=htb
+|       isSynchronized: TRUE
+|       highestCommittedUSN: 176218
+|       dsServiceName: CN=NTDS Settings,CN=DC01,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=rebound,DC=htb
+|       dnsHostName: dc01.rebound.htb
+|       defaultNamingContext: DC=rebound,DC=htb
+|       currentTime: 20231111232109.0Z
+|_      configurationNamingContext: CN=Configuration,DC=rebound,DC=htb
+| ssl-cert: Subject: 
+| Subject Alternative Name: DNS:dc01.rebound.htb
+| Issuer: commonName=rebound-DC01-CA/domainComponent=rebound
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2023-08-25T22:48:10
+| Not valid after:  2024-08-24T22:48:10
+| MD5:   6605:cbae:f659:f555:d80b:7a18:adfb:6ce8
+| SHA-1: af8b:ec72:779e:7a0f:41ad:0302:eff5:a6ab:22f0:1c74
+| -----BEGIN CERTIFICATE-----
+| MIIFxzCCBK+gAwIBAgITbwAAAASsurxVn5d8IgAAAAAABDANBgkqhkiG9w0BAQsF
+| ADBIMRMwEQYKCZImiZPyLGQBGRYDaHRiMRcwFQYKCZImiZPyLGQBGRYHcmVib3Vu
+| ZDEYMBYGA1UEAxMPcmVib3VuZC1EQzAxLUNBMB4XDTIzMDgyNTIyNDgxMFoXDTI0
+| MDgyNDIyNDgxMFowADCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKmB
+| 3pF8ECFw39yFvrlzfnzO5/p5R5L2KGDuRV12ZaDO+0z9R4sgqcJQ9m/fArs1aIEL
+| b6C8DIoaKHfILP+50rA3q/OkmyNFs8hIaa+Ja1w3diulCI/d/ewgnUSys3pw3xie
+| Xkup22Sgy3yLPfrb+J67u+oDVD7Gt0e7gn7+vwwgcolGi2ypyg4Z2x1oEjum0+S5
+| ZyMOuJhMNYfaRt7T91ahxzS2HS6ZOX+Iz6qvcg1sn36VMzu+T/hgWk3njMiJKk46
+| HW+KACZWS0uxXdADTs0pqKm8Ses2EHU1cKITkF2PDEjwhXMA46TGjIdwSqNWb4JS
+| wL4o1QuzH1bPaDobJBECAwEAAaOCAvAwggLsMDYGCSsGAQQBgjcVBwQpMCcGHysG
+| AQQBgjcVCIe1tX2/jH2CuYk0hp/UUoHi5h51ARwCAW4CAQAwKQYDVR0lBCIwIAYI
+| KwYBBQUHAwIGCCsGAQUFBwMBBgorBgEEAYI3FAICMA4GA1UdDwEB/wQEAwIFoDA1
+| BgkrBgEEAYI3FQoEKDAmMAoGCCsGAQUFBwMCMAoGCCsGAQUFBwMBMAwGCisGAQQB
+| gjcUAgIwHQYDVR0OBBYEFCJgDfv17RVr8NMSp5UAii6hNEBZMB8GA1UdIwQYMBaA
+| FJuYW0Dn6Cuc7TMWlSQCyWiq2+1NMIHKBgNVHR8EgcIwgb8wgbyggbmggbaGgbNs
+| ZGFwOi8vL0NOPXJlYm91bmQtREMwMS1DQSxDTj1kYzAxLENOPUNEUCxDTj1QdWJs
+| aWMlMjBLZXklMjBTZXJ2aWNlcyxDTj1TZXJ2aWNlcyxDTj1Db25maWd1cmF0aW9u
+| LERDPXJlYm91bmQsREM9aHRiP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3Q/YmFz
+| ZT9vYmplY3RDbGFzcz1jUkxEaXN0cmlidXRpb25Qb2ludDCBwQYIKwYBBQUHAQEE
+| gbQwgbEwga4GCCsGAQUFBzAChoGhbGRhcDovLy9DTj1yZWJvdW5kLURDMDEtQ0Es
+| Q049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENO
+| PUNvbmZpZ3VyYXRpb24sREM9cmVib3VuZCxEQz1odGI/Y0FDZXJ0aWZpY2F0ZT9i
+| YXNlP29iamVjdENsYXNzPWNlcnRpZmljYXRpb25BdXRob3JpdHkwHgYDVR0RAQH/
+| BBQwEoIQZGMwMS5yZWJvdW5kLmh0YjBPBgkrBgEEAYI3GQIEQjBAoD4GCisGAQQB
+| gjcZAgGgMAQuUy0xLTUtMjEtNDA3ODM4MjIzNy0xNDkyMTgyODE3LTI1NjgxMjcy
+| MDktMTAwMDANBgkqhkiG9w0BAQsFAAOCAQEAw4L5FKWTdqtt+YemCeYgmhbZSZqm
+| 3Dg6MyXvVvgheQ5v3wBRDokQYdouu7rV2ylPGC2AwIblaayLn1JaMYbg4BuM5N0L
+| aOInfqQqCGKkEA/dvuM0Wbq+rZWXOhCSmHof6cdcjwhXzINU1kEAEYYJJ5I8xZG6
+| FkR5JloYTCDhicy6MXUy5fk3STs8gQHjHrh3e49Osa0BaaM20XloFkOqv4dm2Avg
+| 76RNsjZhPQFXv/QqVhrMII2H0W8LwxArl9t7KARejLqTq5c0RtIuz5qCZEKCmswZ
+| cvuQPYlbVMOvuQuf3Up+FYRhfkbe0N1KABXJV0pG2OJ0eF8i3JkdBO5tmg==
+|_-----END CERTIFICATE-----
+Service Info: Host: DC01; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Nov 12 02:51:52 2023 -- 1 IP address (1 host up) scanned in 31.04 seconds

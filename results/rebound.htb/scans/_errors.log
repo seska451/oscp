@@ -1,0 +1,10 @@
+[*] Service scan DNS Reverse Lookup (tcp/53/domain/dns-reverse-lookup) ran a command which returned a non-zero exit code (9).
+[-] Command: dig -p 53 -x rebound.htb @rebound.htb
+[-] Error Output:
+
+
+[*] Service scan DNS Zone Transfer (tcp/53/domain/dns-zone-transfer) ran a command which returned a non-zero exit code (9).
+[-] Command: dig AXFR -p 53 @rebound.htb
+[-] Error Output:
+
+

@@ -1,0 +1,1 @@
+# Nmap 7.94 scan initiated Sun Nov 12 02:51:21 2023 as: nmap -vv --reason -Pn -T4 -sV -p 139 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/src/oscp/results/rebound.htb/scans/tcp139/tcp_139_smb_nmap.txt -oX /home/kali/src/oscp/results/rebound.htb/scans/tcp139/xml/tcp_139_smb_nmap.xml rebound.htb
