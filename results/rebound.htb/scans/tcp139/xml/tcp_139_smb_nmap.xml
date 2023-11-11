@@ -20,3 +20,25 @@
 <taskprogress task="NSE" time="1699719714" percent="95.77" remaining="2" etc="1699719715"/>
 <taskend task="NSE" time="1699719717"/>
 <taskbegin task="NSE" time="1699719717"/>
+<taskend task="NSE" time="1699719719"/>
+<taskbegin task="NSE" time="1699719719"/>
+<taskend task="NSE" time="1699719719"/>
+<host starttime="1699719682" endtime="1699719719"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.129.229.114" addrtype="ipv4"/>
+<hostnames>
+<hostname name="rebound.htb" type="user"/>
+<hostname name="rebound.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="smb-enum-services" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<hostscript><script id="smb2-security-mode" output="SMB: Couldn&apos;t find a NetBIOS name that works for the server. Sorry!">false</script><script id="smb-vuln-ms10-061" output="SMB: Couldn&apos;t find a NetBIOS name that works for the server. Sorry!">false</script><script id="smb-print-text" output="false">false</script><script id="smb2-capabilities" output="SMB: Couldn&apos;t find a NetBIOS name that works for the server. Sorry!">false</script><script id="smb2-time" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-mbenum" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-protocols" output="No dialects accepted. Something may be blocking the responses"/></hostscript><times srtt="138144" rttvar="138144" to="690720"/>
+</host>
+<taskbegin task="NSE" time="1699719719"/>
+<taskend task="NSE" time="1699719719"/>
+<taskbegin task="NSE" time="1699719719"/>
+<taskend task="NSE" time="1699719719"/>
+<taskbegin task="NSE" time="1699719719"/>
+<taskend task="NSE" time="1699719719"/>
+<runstats><finished time="1699719719" timestr="Sun Nov 12 02:51:59 2023" summary="Nmap done at Sun Nov 12 02:51:59 2023; 1 IP address (1 host up) scanned in 38.45 seconds" elapsed="38.45" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

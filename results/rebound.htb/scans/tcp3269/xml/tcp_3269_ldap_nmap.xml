@@ -17,3 +17,5 @@
 <taskbegin task="Service scan" time="1699719682"/>
 <taskend task="Service scan" time="1699719718" extrainfo="1 service on 1 host"/>
 <taskbegin task="NSE" time="1699719718"/>
+<taskend task="NSE" time="1699719739"/>
+<taskbegin task="NSE" time="1699719739"/>

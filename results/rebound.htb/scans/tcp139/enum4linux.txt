@@ -113,3 +113,27 @@ Unable to connect with SMB1 -- no workgroup available
 [0m[33m
 [+] [0m[32m Getting local groups:
 
+[0m[33m
+[+] [0m[32m Getting local group memberships:
+
+[0m[33m
+[+] [0m[32m Getting domain groups:
+
+[0m[33m
+[+] [0m[32m Getting domain group memberships:
+
+[0m
+[34m ===================( [0m[32mUsers on rebound.htb via RID cycling (RIDS: 500-550,1000-1050)[0m[34m )===================
+
+[0m[33m
+[E] [0m[31mCouldn't get SID: NT_STATUS_ACCESS_DENIED.  RID cycling not possible.
+
+[0m
+[34m ================================( [0m[32mGetting printer info for rebound.htb[0m[34m )================================
+
+[0mdo_cmd: Could not initialise spoolss. Error was NT_STATUS_ACCESS_DENIED
+
+
+enum4linux complete on Sun Nov 12 02:52:05 2023
+
+
